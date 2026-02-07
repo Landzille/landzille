@@ -91,8 +91,8 @@ export const slides: Slide[] = [
   },
   {
     id: 3,
-    image: "/assets/gainsville.jpg",
-    location: "Fort Worth",
+    image: "/assets/roxton.jpeg",
+    location: "Roxton\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
     heading: "Build Your Future with Trusted Land Opportunities.",
   },
 ];
@@ -270,7 +270,7 @@ export const properties: Property[] = [
   {
     id: 5,
     link: "/leonard-texas",
-    image: "/assets/leonard-new.jpg",
+    image: "/assets/leonard.jpeg",
     county: "FANNIN COUNTY",
     title: "Leonard Texas",
     description:
@@ -538,6 +538,45 @@ export const galleryItems: GalleryItem[] = [
     src: "https://www.youtube.com/watch?v=S6_90d98zR0",
     thumbnail: "/assets/youTubePlaceholder.jpg",
     alt: "Consultation video",
+  },
+];
+
+export const leonardGalleryItems = [
+  {
+    id: "1",
+    type: "image",
+    src: "/assets/leonard-1.jpeg",
+    alt: "Aerial view of land property 1",
+  },
+  {
+    id: "2",
+    type: "image",
+    src: "/assets/leonard-2.jpeg",
+    alt: "Aerial view of land property 2",
+  },
+  {
+    id: "3",
+    type: "image",
+    src: "/assets/leonard-3.jpeg",
+    alt: "Aerial view of land property 3",
+  },
+  {
+    id: "4",
+    type: "image",
+    src: "/assets/leonard-4.jpeg",
+    alt: "Aerial view of land property 4",
+  },
+  {
+    id: "5",
+    type: "image",
+    src: "/assets/leonard-5.jpeg",
+    alt: "Aerial view of land property 5",
+  },
+  {
+    id: "6",
+    type: "image",
+    src: "/assets/leonard.jpeg",
+    alt: "Aerial view of land property 1",
   },
 ];
 

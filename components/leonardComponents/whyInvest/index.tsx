@@ -28,7 +28,7 @@ const WhyInvest = () => {
       </div>
       <div className={styles.colTwo}>
         <Image
-          src="/assets/leonard-new.jpg"
+          src="/assets/leonard-1.jpeg"
           width={646}
           height={425}
           alt="Gainesville"

@@ -7,7 +7,7 @@ const CalculatorPage = () => {
   return (
     <div>
       <Header />
-      <OtherPageHero headerText="Comming Soon" />
+      <OtherPageHero headerText="Coming Soon" />
       <Footer />
     </div>
   );

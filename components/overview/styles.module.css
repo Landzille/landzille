@@ -1,0 +1,157 @@
+.overview {
+  padding: 120px 0px;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #2f6a50;
+  margin: 0 0 16px 0;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+  margin: 0 0 48px 0;
+  max-width: 600px;
+}
+
+/* Weekly Grid */
+.weeksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 48px;
+}
+
+.weekCard {
+  background: #fbfaf9;
+  padding: 80px 24px 24px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.weekTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2f6a50;
+  margin: 0 0 2px 0;
+  line-height: 20px;
+}
+
+.weekList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.weekList li {
+  font-size: 14px;
+  color: #6d7378;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.weekList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2d6a4f;
+  font-weight: bold;
+}
+
+/* Experience Grid */
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.experienceCard {
+  background: #fbfaf9;
+  padding: 80px 24px 24px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.experienceTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2f6a50;
+  margin: 0 0 2px 0;
+  line-height: 20px;
+}
+
+.experienceText {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Instrument Sans", sans-serif;
+  color: #6d7378;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .weeksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview {
+    padding: 80px 0px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .weeksGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .weekCard,
+  .experienceCard {
+    padding: 1.5rem;
+  }
+
+  .weekTitle {
+    font-size: 1.125rem;
+  }
+
+  .experienceTitle {
+    font-size: 1.25rem;
+  }
+}

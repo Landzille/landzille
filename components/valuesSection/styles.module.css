@@ -1,0 +1,166 @@
+.valuesSection {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2f6a50;
+  margin: 0;
+  line-height: 44px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+  margin: 0;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.supportText,
+.commitment {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+  margin: 0;
+}
+
+.highlight {
+  font-weight: 600;
+  font-style: italic;
+  color: #1f2937;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.valueCard {
+  background-color: #fbfaf9;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+}
+
+.iconWrapper {
+  margin-bottom: 80px;
+}
+
+.valueTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d5a4d;
+  margin: 0 0 2px 0;
+}
+
+.valueDescription {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .valuesSection {
+    padding: 80px 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .header {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description,
+  .supportText,
+  .commitment {
+    font-size: 14px;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .valueCard {
+    padding: 2rem;
+  }
+
+  .iconWrapper {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.5rem;
+  }
+
+  .valueTitle {
+    font-size: 1.25rem;
+  }
+
+  .valueDescription {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .valuesSection {
+    padding: 3rem 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

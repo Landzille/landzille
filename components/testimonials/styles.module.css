@@ -1,0 +1,138 @@
+.section {
+  background: #f9fafb;
+  padding: 120px 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: #ee7c2b;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.heading {
+  color: #2f6a50;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.description {
+  color: #6d7378;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 48px 0;
+  max-width: 600px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.videoWrapper > iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  padding: 1.75rem;
+}
+
+.title {
+  color: #2e3338;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.name {
+  border-top: 1px solid #0000001a;
+  color: #2e3338;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 24px;
+  margin: 0 0 8px 0;
+}
+
+.role {
+  color: #6d7378;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .videoWrapper {
+    height: 280px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 80px 0;
+  }
+  .container {
+    max-width: 90%;
+  }
+  .videoWrapper {
+    height: 200px;
+  }
+}

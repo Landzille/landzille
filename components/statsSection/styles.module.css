@@ -1,0 +1,73 @@
+.stats {
+  background: white;
+  border: 1px solid #e1ded766;
+  margin-bottom: 80px;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px;
+}
+
+.statCard {
+  text-align: center;
+  border-left: 1px solid #e1ded766;
+  border-right: 1px solid #e1ded766;
+  padding: 40px;
+}
+
+.value {
+  color: #2f6a50;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: "Instrument Sans", sans-serif;
+  margin-bottom: 12px;
+}
+
+.label {
+  color: #2e3338;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Instrument Sans", sans-serif;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #6d7378;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 12px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+  }
+
+  .value {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 90%;
+  }
+  .value {
+    font-size: 35px;
+  }
+}

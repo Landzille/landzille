@@ -1,0 +1,75 @@
+.shareSection {
+  padding: 24px 0;
+}
+
+.sidebarTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6d7378;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.shareButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shareTwitter,
+.shareFacebook,
+.shareLinkedIn,
+.shareThrends,
+.sharePinterest {
+  display: block;
+  padding: 10px 16px;
+  background: #f9fafb;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.shareFacebook {
+  border: 1px solid #3c5998;
+}
+
+.shareTwitter,
+.shareThrends {
+  border: 1px solid #000000;
+}
+
+.shareLinkedIn {
+  border: 1px solid #0177b5;
+}
+
+.sharePinterest {
+  border: 1px solid #bd091c;
+}
+
+.shareButton:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+@media (max-width: 1024px) {
+  .shareSection {
+    padding: 0;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .shareButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .shareButton {
+    flex: 1;
+    min-width: 120px;
+  }
+}

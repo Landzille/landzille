@@ -1,0 +1,89 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 33px;
+  background: #ffffff;
+  padding: 120px 0px;
+}
+
+.colOne > h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2f6a50;
+  margin-bottom: 16px;
+}
+
+.colOne > p {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+}
+
+.listings {
+  padding-left: 20px;
+}
+
+.colOne > span {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2e3338;
+}
+
+.colTwo > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 33px;
+  background: #ffffff;
+  padding: 120px 0px;
+}
+
+.colOne > h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2f6a50;
+  margin-bottom: 16px;
+}
+
+.colOne > p {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+}
+
+.listings {
+  padding-left: 20px;
+}
+
+.colOne > span {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2e3338;
+}
+
+.colTwo > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}

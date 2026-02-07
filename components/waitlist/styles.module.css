@@ -1,0 +1,161 @@
+.waitlistSection {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 480px;
+  border-radius: 12px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2f6a50;
+  margin: 0 0 24px 0;
+  line-height: 44px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.input {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6d7378;
+  background-color: #eff7e980;
+  border: 0.5px solid #6d737833;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2d5a4d;
+  box-shadow: 0 0 0 3px rgba(45, 90, 77, 0.1);
+}
+
+.submitButton {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #2f6a50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.submitButton:hover {
+  background-color: #29604a;
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    gap: 3rem;
+  }
+
+  .imageWrapper {
+    height: 500px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .waitlistSection {
+    padding: 4rem 0;
+  }
+
+  .formWrapper {
+    padding: 16px 0px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 90%;
+  }
+
+  .imageWrapper {
+    height: auto;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .nameRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.errorMessage {
+  color: #c62828;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #ffebee;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.successMessage {
+  color: #2e7d32;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #e8f5e9;
+  border-radius: 6px;
+  text-align: center;
+}

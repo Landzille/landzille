@@ -1,0 +1,128 @@
+.loading {
+  padding: 20px;
+  text-align: center;
+  color: #718096;
+}
+
+.editorContainer {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.editorToolbar {
+  background: #f7fafc;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.editorToolbar button {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editorToolbar button:hover {
+  background: #edf2f7;
+  border-color: #a0aec0;
+}
+
+.isActive {
+  background: #2f6a50 !important;
+  color: white !important;
+  border-color: #2f6a50 !important;
+}
+
+.editorContent {
+  min-height: 400px;
+  padding: 20px;
+}
+
+.editorContent :global(.ProseMirror) {
+  min-height: 400px;
+  outline: none;
+}
+
+.editorContent :global(.ProseMirror p.is-editor-empty:first-child::before) {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.editorContent :global(h1) {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+.editorContent :global(h2) {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+.editorContent :global(h3) {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+.editorContent :global(p) {
+  margin-bottom: 1em;
+}
+
+.editorContent :global(ul),
+.editorContent :global(ol) {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.editorContent :global(li) {
+  margin-bottom: 0.5em;
+}
+
+.editorContent :global(blockquote) {
+  border-left: 4px solid #2f6a50;
+  padding-left: 1em;
+  margin: 1em 0;
+  color: #4a5568;
+  font-style: italic;
+}
+
+.editorContent :global(code) {
+  background: #f7fafc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.editorContent :global(pre) {
+  background: #1a202c;
+  color: #f7fafc;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.editorContent :global(pre code) {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.editorProse {
+  outline: none;
+}

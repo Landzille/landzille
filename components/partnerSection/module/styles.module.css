@@ -1,0 +1,41 @@
+/* components/PartnersSection/PartnerLogo.module.css */
+.logoLink {
+  display: block;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+}
+
+.logoLink:hover .logo {
+  opacity: 0.8;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 80%;
+  height: auto;
+  max-width: 180px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 140px;
+  }
+
+  .logoWrapper {
+    min-width: 140px;
+  }
+}

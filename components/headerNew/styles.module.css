@@ -1,0 +1,190 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fbfaf9;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px 0px;
+  border-bottom: 1px solid #6d737833;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.logoImage {
+  width: 50%;
+  height: auto;
+}
+
+.nav {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: #374151;
+  text-decoration: none;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.navLink:hover {
+  color: #667eea;
+}
+
+.dropdownIcon {
+  font-size: 0.6rem;
+  margin-left: 0.2rem;
+}
+
+.ctaButton {
+  display: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  background: transparent;
+  color: #2e3338;
+  border: 0.5px solid #2e3338;
+  font-family: "Instrument Sans", sans-serif;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+}
+
+.mobileMenuToggle {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+.hamburger {
+  width: 25px;
+  height: 2px;
+  background: #374151;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #374151;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.mobileMenu {
+  display: block;
+  background: #ffffff;
+  padding: 2rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobileNavList li {
+  margin-bottom: 1.5rem;
+}
+
+.mobileNavLink {
+  font-family: "Instrument Sans", sans-serif;
+  color: #374151;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: #2f6a50;
+}
+
+.mobileCtaButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #2f6a50;
+  color: white;
+  font-family: "Instrument Sans", sans-serif;
+  border: 0.5px solid #2e3338;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 6400;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.mobileCtaButton:hover {
+  background: #5568d3;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+
+  .ctaButton {
+    display: inline-block;
+  }
+
+  .mobileMenuToggle {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}

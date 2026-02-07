@@ -1,0 +1,259 @@
+.section {
+  background: white;
+  padding: 120px 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.headerContent {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  color: #ee7c2b;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 20px;
+  margin: 0 0 8px 0;
+}
+
+.heading {
+  color: #2c5f5d;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.description {
+  color: #6d7378;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  max-width: 900px;
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border: 1px solid #6d737833;
+  background: white;
+  color: #6b7280;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  border-color: #2c5f5d;
+  color: #2c5f5d;
+}
+
+.filterButton.active {
+  background: #2f6a50;
+  color: white;
+  border-color: #2c5f5d;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  min-height: 400px;
+}
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.noResults p {
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #f9f7f5;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  color: #6d7378;
+  font-family: "Instrument sans", sans-serif;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.content {
+  padding: 24px;
+}
+
+.title {
+  color: #2e3338;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.propertyDescription {
+  color: #6d7378;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background: #f3f1ed;
+  color: #25292d;
+  font-family: "Instrument Sans", sans-serif;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.inquireButton {
+  color: #2f6a4f;
+  background: transparent;
+  font-family: "Instrument sans", sans-serif;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.inquireButton:hover {
+  color: #1e4442;
+}
+
+.detailsLink {
+  color: #2f6a4f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Instrument sans", sans-serif;
+  display: flex;
+  gap: 8px;
+  transition: gap 0.3s ease;
+}
+
+.detailsLink:hover {
+  gap: 0.75rem;
+}
+
+.arrow {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.detailsLink:hover .arrow {
+  transform: translateX(4px);
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .headerContent {
+    flex: 1;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+
+  .filters {
+    flex-shrink: 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 80px 0;
+  }
+  .container {
+    max-width: 90%;
+  }
+}

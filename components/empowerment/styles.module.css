@@ -1,0 +1,38 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 120px 0px;
+}
+
+.container > h2 {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #2f6a50;
+  line-height: 44px;
+  margin-bottom: 16px;
+}
+
+.container > p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 80px 0px;
+  }
+
+  .container > h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .container > p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

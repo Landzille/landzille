@@ -1,0 +1,96 @@
+.insightsSection {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ee7c2b;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2f6a50;
+  margin: 0;
+}
+
+.readMoreButton {
+  display: inline-block;
+  padding: 16px 77px;
+  font-size: 16px;
+  font-family: "instrument sans", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2f6a50;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.readMoreButton:hover {
+  background-color: #234839;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 90, 77, 0.3);
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .insightsSection {
+    padding: 4rem 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .readMoreButton {
+    width: 100%;
+    text-align: center;
+  }
+}

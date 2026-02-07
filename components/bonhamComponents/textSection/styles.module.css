@@ -40,3 +40,9 @@
 .textBox p > ul {
   padding-left: 30px;
 }
+
+@media (max-width: 768px) {
+  .contain {
+    width: 90%;
+  }
+}

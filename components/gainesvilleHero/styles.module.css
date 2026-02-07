@@ -136,18 +136,24 @@
     gap: 2rem;
   }
 
+  .container {
+    padding: 150px 0px 70px 0px;
+    max-width: 90%;
+  }
+
   .heroContent {
     padding-right: 0;
     margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .heroContent > p {
+    width: 100%;
+    padding: 0 1rem;
   }
 
   .title {
-    font-size: 2.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 2.25rem;
+    font-size: 35px;
+    width: 100%;
   }
 }

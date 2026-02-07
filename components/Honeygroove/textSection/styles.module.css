@@ -44,3 +44,9 @@
 .textBox p > ul > li {
   line-height: 20px;
 }
+
+@media (max-width: 768px) {
+  .contain {
+    width: 90%;
+  }
+}

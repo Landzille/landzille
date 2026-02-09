@@ -280,6 +280,19 @@ export const properties: Property[] = [
     tags: ["RESIDENTIAL"],
     actions: ["Inquire for Price"],
   },
+  {
+    id: 6,
+    link: "/roxton-texas",
+    image: "/assets/roxton-1.jpeg",
+    county: "LAMAR COUNTY",
+    title: "Roxton Texas",
+    description:
+      "Embrace the community spirit of Roxton. Spacious layouts for country living.",
+    location: "NORTH STAR",
+    acres: "11-25 ACRES",
+    tags: ["RESIDENTIAL"],
+    actions: ["Inquire for Price"],
+  },
 ];
 
 export const filters = [
@@ -287,6 +300,7 @@ export const filters = [
   "Fannin County",
   "Hunt County",
   "Cooke County",
+  "Lamar County",
 ];
 
 interface FeatureNew {
@@ -576,6 +590,45 @@ export const leonardGalleryItems = [
     id: "6",
     type: "image",
     src: "/assets/leonard.jpeg",
+    alt: "Aerial view of land property 1",
+  },
+];
+
+export const roxtonGallery = [
+  {
+    id: "1",
+    type: "image",
+    src: "/assets/roxton-1.jpeg",
+    alt: "Aerial view of land property 1",
+  },
+  {
+    id: "2",
+    type: "image",
+    src: "/assets/roxton-2.jpeg",
+    alt: "Aerial view of land property 2",
+  },
+  {
+    id: "3",
+    type: "image",
+    src: "/assets/roxton-3.jpeg",
+    alt: "Aerial view of land property 3",
+  },
+  {
+    id: "4",
+    type: "image",
+    src: "/assets/roxton-4.jpeg",
+    alt: "Aerial view of land property 4",
+  },
+  {
+    id: "5",
+    type: "image",
+    src: "/assets/roxton-5.jpeg",
+    alt: "Aerial view of land property 5",
+  },
+  {
+    id: "6",
+    type: "image",
+    src: "/assets/roxton-6.jpeg",
     alt: "Aerial view of land property 1",
   },
 ];

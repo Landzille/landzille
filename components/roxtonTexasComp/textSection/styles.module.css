@@ -1,0 +1,52 @@
+.container {
+  background: #eff7e9;
+  padding: 120px 0px;
+}
+
+.contain {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.textBox {
+  margin-bottom: 24px;
+}
+
+.textBox > h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2e3338;
+  margin-bottom: 12px;
+}
+
+.textBox > p {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7378;
+}
+
+.list > li {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 2px;
+  color: #6d7378;
+}
+
+.textBox p > ul {
+  padding-left: 30px;
+}
+
+.textBox p > ul > li {
+  line-height: 25spx;
+}
+
+@media (max-width: 768px) {
+  .contain {
+    width: 90%;
+  }
+}

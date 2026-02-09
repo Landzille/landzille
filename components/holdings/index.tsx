@@ -16,6 +16,7 @@ export default function Holdings() {
       "Fannin County": "FANNIN COUNTY",
       "Hunt County": "HUNT COUNTY",
       "Cooke County": "COOKE COUNTY",
+      "Lamar County": "LAMAR COUNTY",
     };
 
     return property.county === countyMap[activeFilter];

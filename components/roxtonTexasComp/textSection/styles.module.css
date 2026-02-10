@@ -42,7 +42,7 @@
 }
 
 .textBox p > ul > li {
-  line-height: 25spx;
+  line-height: 25px;
 }
 
 @media (max-width: 768px) {

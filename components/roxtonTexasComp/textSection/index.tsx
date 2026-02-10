@@ -104,6 +104,8 @@ const RoxtonTexts = () => {
           <p>
             Roxton represents the convergence of the Industrial Commuter and the
             Lake Entrepreneur. High-potential avenues include:
+            <br />
+            <br />
             <ul className={styles.list}>
               <li>
                 Legacy Estates: From 11acre tracts for multi-generational
@@ -122,6 +124,8 @@ const RoxtonTexts = () => {
                 for the 2026 &quot;Water Boom&quot; peak.
               </li>
             </ul>
+            <br />
+            <br />
             Geography is Destiny. The maps are being redrawn. Is your name on
             the new one? <br />
             Join the movement. Secure your piece of the Roxton Nexus today!

@@ -1,3 +1,4 @@
+import DownloadMagazine from "@/components/downloadMagazine";
 import Features from "@/components/features";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -6,6 +7,7 @@ import Holdings from "@/components/holdings";
 import InsightsSection from "@/components/insights/insightSection";
 import OtherHeroSection from "@/components/otherHeros";
 import PartnersSection from "@/components/partnerSection/section";
+import Popup from "@/components/popup";
 import Reviews from "@/components/review";
 import Stats from "@/components/statsSection";
 import WhyInvest from "@/components/whyInvest";
@@ -15,6 +17,9 @@ const HomePage = () => {
   return (
     <div>
       <Header />
+      <Popup>
+        <DownloadMagazine />
+      </Popup>
       <Hero />
       <Features />
       <Stats />

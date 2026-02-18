@@ -1,0 +1,281 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a4a2e;
+  margin: 0 0 4px;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #5a7a6a;
+  margin: 0;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.scoreLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.scoreEmoji {
+  font-size: 1.2rem;
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2d5a3d;
+  margin: 0;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #ddeedd;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: #7a9a8a;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.statValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a4a2e;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.monthlyCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #ddeedd;
+  text-align: center;
+}
+
+.monthlyLabel {
+  font-size: 0.8rem;
+  color: #7a9a8a;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.monthlyValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a4a2e;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.monthlyMeta {
+  font-size: 0.78rem;
+  color: #7a9a8a;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.closingCard {
+  background: #e07b2a;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.closingLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.closingValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.closingBreakdown {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.breakdownSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.breakdownGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.breakdownItem {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid #ddeedd;
+}
+
+.breakdownLabel {
+  font-size: 0.78rem;
+  color: #7a9a8a;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.breakdownValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a4a2e;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.breakdownNote {
+  font-size: 0.7rem;
+  color: #a0b8a8;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.savingsCard {
+  background: #d6eac6;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.savingsLabel {
+  font-size: 0.85rem;
+  color: #2f6a50;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.savingsValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a4a2e;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.primaryCta {
+  width: 100%;
+  padding: 16px;
+  background: #2f6a50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.primaryCta:hover {
+  background: #2f6a50;
+  transform: translateY(-1px);
+}
+
+.secondaryCta {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  color: #2f6a50;
+  border: 1px solid #2f6a50;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.secondaryCta:hover {
+  background: #2f6a50;
+  color: #fff;
+}
+
+.resetBtn {
+  background: none;
+  border: none;
+  color: #7a9a8a;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 4px;
+  font-family: "Instrument Sans", sans-serif;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.resetBtn:hover {
+  color: #1a4a2e;
+}
+
+@media (max-width: 540px) {
+  .statsGrid,
+  .breakdownGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .scoreBadge {
+    flex-direction: row;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,59 @@
+.wrapper {
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #5a7a6a;
+  margin: 0 0 12px;
+  font-family: "Arial", sans-serif;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #b0cdb8;
+  background: #f0f7f0;
+  color: #5a7a6a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: "Arial", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.circle.active {
+  background: #2f6a50;
+  border-color: #2f6a50;
+  color: #fff;
+}
+
+.circle.completed {
+  background: #2f6a50;
+  border-color: #2f6a50;
+  color: #fff;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #b0cdb8;
+  border-top: 2px dashed #b0cdb8;
+  margin: 0 4px;
+  transition: border-color 0.3s ease;
+}
+
+.lineCompleted {
+  border-top-style: solid;
+  border-color: #1a4a2e;
+}

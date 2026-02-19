@@ -29,6 +29,19 @@ const RoxtonHero = () => {
             </p>
           </div>
         </div>
+        <div className={styles.videoCard}>
+          <div className={styles.videoContainer}>
+            <div className={styles.videoPlayer}>
+              <iframe
+                src="https://www.youtube.com/embed/ErG-7b66Z8U?si=r5zgkNs-ZvaI2_W2"
+                title="YouTube video player"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

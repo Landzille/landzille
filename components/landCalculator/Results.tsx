@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Results.module.css";
 import { CalculationResult } from "../../types/calculator";
 import { formatCurrency } from "../../utils/calculations";
+import Link from "next/link";
 
 interface ResultsProps {
   result: CalculationResult;
@@ -76,9 +77,6 @@ const Results: React.FC<ResultsProps> = ({
         <span className={styles.closingValue}>
           {formatCurrency(result.totalDueAtClosing)}
         </span>
-        <span className={styles.closingBreakdown}>
-          Down Payment + Closing Costs
-        </span>
       </div>
 
       {/* <div className={styles.breakdownSection}>
@@ -113,12 +111,12 @@ const Results: React.FC<ResultsProps> = ({
       </div>
 
       <div className={styles.ctaSection}>
-        <button className={styles.primaryCta}>
+        <Link className={styles.primaryCta} href="/#land-listings">
           🔍 See Available Land That Fits Your Budget
-        </button>
-        <button className={styles.secondaryCta}>
+        </Link>
+        <Link className={styles.secondaryCta} href="/contact">
           📞 Book a Free Land Strategy Call
-        </button>
+        </Link>
         <button className={styles.resetBtn} onClick={onReset}>
           ↩ Calculate Again
         </button>

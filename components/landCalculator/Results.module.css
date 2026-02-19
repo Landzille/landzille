@@ -202,6 +202,7 @@
 .ctaSection {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
   padding-top: 4px;
 }
@@ -210,6 +211,11 @@
   width: 100%;
   padding: 16px;
   background: #2f6a50;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -230,6 +236,11 @@
   padding: 15px;
   background: transparent;
   color: #2f6a50;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #2f6a50;
   border-radius: 10px;
   font-size: 0.95rem;

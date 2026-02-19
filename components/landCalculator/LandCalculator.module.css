@@ -47,5 +47,6 @@
 
   .card {
     padding: 20px 16px;
+    max-width: 100%;
   }
 }

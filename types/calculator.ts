@@ -13,8 +13,10 @@ export interface Step1FormData {
 }
 
 export interface Step2FormData {
-  fullName: string;
+  firstName: string;
+  lastName: string;
   email: string;
+  phone: string;
 }
 
 export interface CalculationResult {

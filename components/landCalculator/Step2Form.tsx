@@ -8,26 +8,55 @@ interface Step2FormProps {
 }
 
 const Step2Form: React.FC<Step2FormProps> = ({ onSubmit }) => {
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [apiError, setApiError] = useState("");
 
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
-    if (!fullName.trim()) newErrors.fullName = "Full name is required";
+    if (!firstName.trim()) newErrors.firstName = "First name is required";
+    if (!lastName.trim()) newErrors.lastName = "Last name is required";
     if (!email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "Please enter a valid email";
     }
+    if (!phone.trim()) newErrors.phone = "Phone number is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setApiError("");
     if (!validate()) return;
-    onSubmit({ fullName, email });
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/subscribe-calculator", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName, lastName, email, phone }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setApiError(data.error || "Something went wrong. Please try again.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      onSubmit({ firstName, lastName, email, phone });
+    } catch {
+      setApiError("Something went wrong. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -39,23 +68,44 @@ const Step2Form: React.FC<Step2FormProps> = ({ onSubmit }) => {
       </p>
 
       <form className={styles.form} onSubmit={handleSubmit} noValidate>
-        <div className={styles.field}>
-          <label className={styles.label} htmlFor="fullName">
-            Full Name
-          </label>
-          <input
-            id="fullName"
-            type="text"
-            className={`${styles.input} ${
-              errors.fullName ? styles.inputError : ""
-            }`}
-            placeholder="Enter your full name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          />
-          {errors.fullName && (
-            <span className={styles.error}>{errors.fullName}</span>
-          )}
+        <div className={styles.row}>
+          <div className={styles.field}>
+            <label className={styles.label} htmlFor="firstName">
+              First Name
+            </label>
+            <input
+              id="firstName"
+              type="text"
+              className={`${styles.input} ${
+                errors.firstName ? styles.inputError : ""
+              }`}
+              placeholder="First name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            {errors.firstName && (
+              <span className={styles.error}>{errors.firstName}</span>
+            )}
+          </div>
+
+          <div className={styles.field}>
+            <label className={styles.label} htmlFor="lastName">
+              Last Name
+            </label>
+            <input
+              id="lastName"
+              type="text"
+              className={`${styles.input} ${
+                errors.lastName ? styles.inputError : ""
+              }`}
+              placeholder="Last name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            {errors.lastName && (
+              <span className={styles.error}>{errors.lastName}</span>
+            )}
+          </div>
         </div>
 
         <div className={styles.field}>
@@ -75,8 +125,31 @@ const Step2Form: React.FC<Step2FormProps> = ({ onSubmit }) => {
           {errors.email && <span className={styles.error}>{errors.email}</span>}
         </div>
 
-        <button type="submit" className={styles.submitBtn}>
-          Show My Results →
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="phone">
+            Phone Number
+          </label>
+          <input
+            id="phone"
+            type="tel"
+            className={`${styles.input} ${
+              errors.phone ? styles.inputError : ""
+            }`}
+            placeholder="Enter your phone number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+          {errors.phone && <span className={styles.error}>{errors.phone}</span>}
+        </div>
+
+        {apiError && <p className={styles.apiError}>{apiError}</p>}
+
+        <button
+          type="submit"
+          className={styles.submitBtn}
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Submitting..." : "Show My Results →"}
         </button>
 
         <p className={styles.privacy}>

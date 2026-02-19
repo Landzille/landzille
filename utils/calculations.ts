@@ -1,11 +1,10 @@
-import { Step1FormData, CalculationResult } from '../types/calculator';
+import { Step1FormData, CalculationResult } from "../types/calculator";
 import {
   CLOSING_COST_PERCENT,
   NUTRIENT_DEDUCTION_FIXED,
   PROPERTY_TAX_PERCENT,
-  SAVINGS_PERCENT,
   NORTH_TEXAS_COUNTIES,
-} from '../constants/data';
+} from "../constants/data";
 
 export function calculateResults(formData: Step1FormData): CalculationResult {
   const county = NORTH_TEXAS_COUNTIES.find((c) => c.name === formData.county);
@@ -23,7 +22,7 @@ export function calculateResults(formData: Step1FormData): CalculationResult {
   const totalDueAtClosing = downPayment + closingCosts;
   const nutrientDeduction = NUTRIENT_DEDUCTION_FIXED;
   const propertyTaxEstimate = totalPrice * PROPERTY_TAX_PERCENT;
-  const estimatedSavings = Math.round(totalPrice * SAVINGS_PERCENT);
+  const estimatedSavings = Math.round(propertyTaxEstimate + nutrientDeduction);
 
   return {
     totalPrice,
@@ -55,9 +54,9 @@ function calculateMonthlyPayment(
 }
 
 export function formatCurrency(value: number): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(value);
 }

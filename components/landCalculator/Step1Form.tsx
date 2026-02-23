@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import styles from "./Step1Form.module.css";
 import { Step1FormData } from "../../types/calculator";
@@ -22,10 +21,22 @@ const Step1Form: React.FC<Step1FormProps> = ({ onSubmit }) => {
   const [isFirstPurchase, setIsFirstPurchase] = useState<boolean>(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
+  const handleAcresChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAcres(e.target.value);
+  };
+
+  const handleAcresBlur = () => {
+    if (acres === "") return;
+    const parsed = parseFloat(acres);
+    if (!isNaN(parsed) && parsed < 10) {
+      setAcres("10");
+    }
+  };
+
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
-    if (!acres || parseFloat(acres) <= 0) {
-      newErrors.acres = "Please enter a valid number of acres";
+    if (!acres || parseFloat(acres) < 10) {
+      newErrors.acres = "Minimum of 10 acres required";
     }
     if (!county) {
       newErrors.county = "Please select a county";
@@ -58,12 +69,13 @@ const Step1Form: React.FC<Step1FormProps> = ({ onSubmit }) => {
         <input
           id="acres"
           type="number"
-          min="0"
+          min="10"
           step="0.01"
           className={`${styles.input} ${errors.acres ? styles.inputError : ""}`}
-          placeholder="Enter number of acres"
+          placeholder="Enter number of acres (min. 10)"
           value={acres}
-          onChange={(e) => setAcres(e.target.value)}
+          onChange={handleAcresChange}
+          onBlur={handleAcresBlur}
         />
         {errors.acres && <span className={styles.error}>{errors.acres}</span>}
       </div>

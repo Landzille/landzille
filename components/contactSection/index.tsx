@@ -1,10 +1,24 @@
 "use client";
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import YouTube from "@/svg/youTube";
 import styles from "./styles.module.css";
 import Instagram from "@/svg/instagram";
 import Link from "next/link";
 import Tiktok from "@/svg/tiktok";
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void;
+      execute: (
+        siteKey: string,
+        options: { action: string }
+      ) => Promise<string>;
+    };
+  }
+}
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -18,14 +32,21 @@ export default function ContactSection() {
   >("idle");
   const [message, setMessage] = useState("");
 
+  // Load reCAPTCHA script once on mount
+  useEffect(() => {
+    if (document.getElementById("recaptcha-script")) return;
+    const script = document.createElement("script");
+    script.id = "recaptcha-script";
+    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+    script.async = true;
+    document.head.appendChild(script);
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -34,12 +55,24 @@ export default function ContactSection() {
     setMessage("");
 
     try {
+      // Get reCAPTCHA token
+      const token = await new Promise<string>((resolve, reject) => {
+        window.grecaptcha.ready(async () => {
+          try {
+            const t = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+              action: "contact_form",
+            });
+            resolve(t);
+          } catch (err) {
+            reject(err);
+          }
+        });
+      });
+
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, recaptchaToken: token }),
       });
 
       const data = await response.json();
@@ -47,13 +80,7 @@ export default function ContactSection() {
       if (response.ok) {
         setStatus("success");
         setMessage("Thank you! We'll get back to you soon.");
-        // Reset form
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          message: "",
-        });
+        setFormData({ firstName: "", lastName: "", email: "", message: "" });
       } else {
         setStatus("error");
         setMessage(data.error || "Something went wrong");
@@ -118,6 +145,7 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
+
         <div className={styles.formWrapper}>
           <h3>Get in Touch</h3>
           <p className={styles.subtitle}>Let us know how we can help you</p>
@@ -153,6 +181,7 @@ export default function ContactSection() {
               required
               disabled={status === "loading"}
             />
+
             <textarea
               name="message"
               value={formData.message}

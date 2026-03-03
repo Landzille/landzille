@@ -4,6 +4,8 @@ import path from "path";
 
 const BASE_URL = "https://landzille.com";
 
+const EXCLUDED_ROUTES = ["/admin", "/dashboard"];
+
 function getStaticPages(): string[] {
   const appDir = path.join(process.cwd(), "app");
   const pages: string[] = [];
@@ -16,7 +18,16 @@ function getStaticPages(): string[] {
           scanDir(path.join(dir, entry.name), `${baseRoute}/${entry.name}`);
         }
       } else if (entry.name === "page.tsx" || entry.name === "page.ts") {
-        pages.push(baseRoute || "/");
+        const route = baseRoute || "/";
+
+        // Skip excluded routes
+        const isExcluded = EXCLUDED_ROUTES.some((excluded) =>
+          route.startsWith(excluded)
+        );
+
+        if (!isExcluded) {
+          pages.push(route);
+        }
       }
     }
   }

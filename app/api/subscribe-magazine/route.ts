@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(
           {
             message: "Magazine download started!",
-            downloadUrl: "/downloads/magazines/i-am-land-11.pdf",
+            downloadUrl: "/downloads/magazines/i-am-land-12.pdf",
           },
           { status: 200 }
         );
@@ -114,7 +114,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         message: "Successfully subscribed! Your download will begin shortly.",
-        downloadUrl: "/downloads/magazines/i-am-land-11.pdf",
+        downloadUrl: "/downloads/magazines/i-am-land-12.pdf",
       },
       { status: 200 }
     );

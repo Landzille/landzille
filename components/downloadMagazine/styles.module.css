@@ -8,17 +8,10 @@
   gap: 40px;
 }
 
-.image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
 .colOne > img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 12px;
 }
 

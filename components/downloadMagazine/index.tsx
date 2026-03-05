@@ -25,7 +25,7 @@ const DownloadMagazine: React.FC = () => {
   const handleDownload = (downloadUrl: string) => {
     const link = document.createElement("a");
     link.href = downloadUrl;
-    link.download = "i-am-land-11.pdf";
+    link.download = "i-am-land-12.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -75,14 +75,14 @@ const DownloadMagazine: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.colOne}>
         <Image
-          src="/assets/i-am-land.jpeg"
+          src="/assets/i-am-land-12.png"
           width={646}
           height={762}
           alt="download"
         />
       </div>
       <div className={styles.colTwo}>
-        <h2>Download Landzille&apos;s e - Magazine (February Edition)</h2>
+        <h2>Download Landzille&apos;s e - Magazine (March Edition)</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.nameRow}>
             <input

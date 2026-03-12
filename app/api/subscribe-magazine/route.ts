@@ -77,7 +77,6 @@ export async function POST(request: NextRequest) {
           }),
         });
 
-        // Return success with download URL even for existing members
         return NextResponse.json(
           {
             message: "Magazine download started!",

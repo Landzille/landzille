@@ -13,7 +13,7 @@ export default function HeaderNew() {
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/assets/logo-2.png"
+            src="/assets/logo-2.jpeg"
             alt="LandZille"
             width={200}
             height={70}

@@ -35,26 +35,25 @@ export default function RootLayout({
           name="google-site-verification"
           content="Vi23ThNY5Hf-5uT9pOYvoLvrklf5znloej1DcVhmlXY"
         />
-        {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8V7FPS50CS"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-8V7FPS50CS');
-            `,
-          }}
-        />
       </head>
       <body
         className={`${instrumentSans.variable} ${lora.variable} antialiased`}
       >
         <SessionProvider>{children}</SessionProvider>
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8V7FPS50CS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8V7FPS50CS');
+          `}
+        </Script>
 
         {/* Smartarget */}
         <Script

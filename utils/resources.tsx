@@ -134,6 +134,6 @@ export const allResources: Resource[] = [
     title: "LAND INVESTMENT 101",
     subtitle: "Download the Foundations of Successful Land Investment ebook",
     image: "/assets/resources/investment-101.jpg",
-    downloadUrl: "/downloads/Land-ownership.pdf",
+    downloadUrl: "/downloads/resources/Land-ownership.pdf",
   },
 ];

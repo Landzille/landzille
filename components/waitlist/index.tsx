@@ -42,7 +42,6 @@ const SummerWaitlistSection: React.FC = () => {
       if (response.ok) {
         setStatus("success");
         setMessage(data.message || "Successfully joined the waitlist!");
-        // Reset form
         setFormData({
           firstName: "",
           lastName: "",
@@ -60,7 +59,7 @@ const SummerWaitlistSection: React.FC = () => {
   };
 
   return (
-    <section className={styles.waitlistSection}>
+    <section className={styles.waitlistSection} id="join-next-cohort">
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
           <Image

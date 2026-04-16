@@ -56,6 +56,13 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Google Ads Conversion Event */}
+        <Script id="google-conversion-event" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion_event_page_view_1', {});
+          `}
+        </Script>
+
         {/* Smartarget */}
         <Script
           src="https://smartarget.online/loader.js?u=fa22648526c52fb6c791519e6488d69c9d1f2e0a"

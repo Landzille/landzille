@@ -9,12 +9,19 @@ const ratelimit = new Ratelimit({
 });
 
 export async function middleware(request: NextRequest) {
-  const ip = request.headers.get("x-forwarded-for") ?? "anonymous";
+  // x-forwarded-for can be "1.2.3.4, 10.0.0.1" — take only the first IP
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  const ip = forwardedFor?.split(",")[0].trim() ?? "anonymous";
 
-  const { success } = await ratelimit.limit(ip);
+  try {
+    const { success } = await ratelimit.limit(ip);
 
-  if (!success) {
-    return new NextResponse("Too many requests. Slow down!", { status: 429 });
+    if (!success) {
+      return new NextResponse("Too many requests. Slow down!", { status: 429 });
+    }
+  } catch (err) {
+    // Fail open: if Redis is unreachable, don't block legitimate traffic
+    console.error("Rate limit check failed:", err);
   }
 
   return NextResponse.next();

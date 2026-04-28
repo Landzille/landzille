@@ -82,7 +82,7 @@ const DownloadMagazine: React.FC = () => {
         />
       </div>
       <div className={styles.colTwo}>
-        <h2>Download Landzille&apos;s e - Magazine (April Edition)</h2>
+        <h2>Download Landzille&apos;s e - Magazine (May Edition)</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.nameRow}>
             <input

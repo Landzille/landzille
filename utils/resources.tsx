@@ -8,6 +8,14 @@ interface Resource {
 
 export const allResources: Resource[] = [
   {
+    id: "",
+    title: "LIQUID GOLD",
+    subtitle:
+      "How Water is Making North Texas The Greatest Land Opportunity In America",
+    image: "/assets/resources/3D (24).jpg.jpeg",
+    downloadUrl: "/downloads/resources/Liquid Gold.pdf",
+  },
+  {
     id: "1",
     title: "ROXTON TEXAS",
     subtitle: "Top 20 Reasons to Invest",

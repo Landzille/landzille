@@ -8,6 +8,13 @@ interface Magazines {
 
 export const allMagazines: Magazines[] = [
   {
+    id: "",
+    title: "I am Land - Vol 14",
+    subtitle: "Open Ground",
+    image: "/assets/i-am-land-14.jpeg",
+    downloadUrl: "/downloads/magazines/i am land 14.pdf",
+  },
+  {
     id: "1",
     title: "I am Land - Vol 13",
     subtitle: "April and Acres",

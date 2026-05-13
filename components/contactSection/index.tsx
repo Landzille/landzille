@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import Instagram from "@/svg/instagram";
 import Link from "next/link";
 import Tiktok from "@/svg/tiktok";
+import Facebook from "@/svg/facebook";
 
 declare global {
   interface Window {
@@ -140,6 +141,13 @@ export default function ContactSection() {
                   rel="noopener noreferrer"
                 >
                   <Tiktok />
+                </Link>
+                <Link
+                  href="https://facebook.com/landzille"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook />
                 </Link>
               </div>
             </div>

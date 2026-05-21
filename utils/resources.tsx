@@ -9,6 +9,13 @@ interface Resource {
 export const allResources: Resource[] = [
   {
     id: "",
+    title:"The Land Blueprint",
+    subtitle: "A global playbook for building wwealth, freedom & legacy through land",
+    image: "/assets/resources/The_Land_Legacy_Blueprint.jpeg",
+    downloadUrl: "/downloads/resources/The_Land_Legacy_Blueprint.pdf"
+   },
+  {
+    id: "",
     title: "LIQUID GOLD",
     subtitle:
       "How Water is Making North Texas The Greatest Land Opportunity In America",

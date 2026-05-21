@@ -11,7 +11,7 @@ export const allResources: Resource[] = [
     id: "",
     title:"The Land Blueprint",
     subtitle: "A global playbook for building wwealth, freedom & legacy through land",
-    image: "/assets/resources/The_Land_Legacy_Blueprint.jpeg",
+    image: "/assets/resources/The-Land-Legacy-Blueprint.jpeg",
     downloadUrl: "/downloads/resources/The_Land_Legacy_Blueprint.pdf"
    },
   {

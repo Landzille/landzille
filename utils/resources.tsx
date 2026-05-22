@@ -9,7 +9,7 @@ interface Resource {
 export const allResources: Resource[] = [
   {
     id: "",
-    title:"The Land Blueprint",
+    title:"The Land Legacy Blueprint",
     subtitle: "A global playbook for building wwealth, freedom & legacy through land",
     image: "/assets/resources/The-Land-Legacy-Blueprint.jpeg",
     downloadUrl: "/downloads/resources/The_Land_Legacy_Blueprint.pdf"

@@ -75,7 +75,7 @@ const DownloadMagazine: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.colOne}>
         <Image
-          src="/assets/I-am-land-15.png"
+          src="/assets/magazines/I-am-land-15.png"
           width={646}
           height={762}
           alt="download"

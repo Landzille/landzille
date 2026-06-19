@@ -3,10 +3,12 @@ import Footer from "@/components/footer";
 import GallerySection from "@/components/gallery";
 import Header from "@/components/header";
 import { OverviewSection } from "@/components/overview";
-import Reviews from "@/components/review";
 import { SummerHero } from "@/components/summerHero";
+import SummerFaq from "@/components/summerFaq";
+import SummerTestimonials from "@/components/summerTestimonials";
 import TeamResearchSection from "@/components/teamResearch";
 import WaitlistSection from "@/components/waitlist";
+import ReserveSection from "@/components/reserveSection";
 
 const SummerProgram = () => {
   return (
@@ -16,7 +18,9 @@ const SummerProgram = () => {
       <OverviewSection />
       <FeaturesSection />
       <TeamResearchSection />
-      <Reviews />
+      <SummerTestimonials />
+      <ReserveSection />
+      <SummerFaq />
       <GallerySection />
       <WaitlistSection />
       <Footer />

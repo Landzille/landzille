@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Lora } from "next/font/google";
-import Image from "next/image";
 import Script from "next/script";
 import SessionProvider from "@/components/sessionProvider";
 import "./globals.css";
@@ -85,7 +84,8 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             height="1"
             width="1"
             style={{ display: "none" }}

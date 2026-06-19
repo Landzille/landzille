@@ -1,6 +1,29 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 
+async function logToGoogleSheet(data: {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone?: string;
+}) {
+  const scriptUrl = process.env.GOOGLE_SHEETS_SUMMER_SCRIPT_URL;
+  if (!scriptUrl) return;
+
+  try {
+    await fetch(scriptUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...data,
+        secret: process.env.GOOGLE_SHEETS_SUMMER_SECRET,
+      }),
+    });
+  } catch (error) {
+    console.error("Failed to log to Google Sheet:", error);
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { firstName, lastName, email, phone } = await request.json();
@@ -36,26 +59,29 @@ export async function POST(request: NextRequest) {
 
     const url = `https://${serverPrefix}.api.mailchimp.com/3.0/lists/${audienceId}/members/${subscriberHash}`;
 
-    const response = await fetch(url, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Basic ${Buffer.from(`anystring:${apiKey}`).toString(
-          "base64"
-        )}`,
-      },
-      body: JSON.stringify({
-        email_address: email,
-        status_if_new: "subscribed",
-        status: "subscribed",
-        merge_fields: {
-          FNAME: firstName,
-          LNAME: lastName,
-          PHONE: phone || "",
+    const [response] = await Promise.all([
+      fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Basic ${Buffer.from(`anystring:${apiKey}`).toString(
+            "base64"
+          )}`,
         },
-        tags: ["Summer 2026"],
+        body: JSON.stringify({
+          email_address: email,
+          status_if_new: "subscribed",
+          status: "subscribed",
+          merge_fields: {
+            FNAME: firstName,
+            LNAME: lastName,
+            PHONE: phone || "",
+          },
+          tags: ["Summer 2026"],
+        }),
       }),
-    });
+      logToGoogleSheet({ firstName, lastName, email, phone }),
+    ]);
 
     const data = await response.json();
 

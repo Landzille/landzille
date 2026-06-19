@@ -409,6 +409,78 @@ export const reviews: Review[] = [
   },
 ];
 
+interface ParentTestimonial {
+  id: number;
+  name: string;
+  age: number;
+  track: string;
+  quote: string;
+}
+
+export const parentTestimonials: ParentTestimonial[] = [
+  {
+    id: 1,
+    name: "Dami",
+    age: 17,
+    track: "Landzille Track",
+    quote:
+      "I didn't know land could make money. Now I'm telling my parents why we need to buy dirt.",
+  },
+  {
+    id: 2,
+    name: "Kofi",
+    age: 16,
+    track: "Skillweed Track",
+    quote:
+      "The phishing simulation was scary because I almost fell for it. Best lesson of my life.",
+  },
+  {
+    id: 3,
+    name: "Zara",
+    age: 17,
+    track: "Landzille Track",
+    quote: "I gave a 5-minute pitch in front of a panel. I was terrified. I did it anyway.",
+  },
+];
+
+interface FAQ {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export const summerFaqs: FAQ[] = [
+  {
+    id: 1,
+    question: "Is this legitimate?",
+    answer:
+      "Yes. This is a structured program with a defined weekly curriculum, supervised sessions, and a certificate of completion not a casual online course.",
+  },
+  {
+    id: 2,
+    question: "Will my child actually be supervised and engaged? ",
+    answer:
+      "Every session is facilitated live, twice a week, with structured activities and a team challenge built into each class. This isn't a self-paced video course they can ignore.",
+  },
+  {
+    id: 3,
+    question: "Is it safe? ",
+    answer:
+      "Yes — all sessions are virtual and facilitator-led. Part of the curriculum is specifically about helping your child stay safe online, including spotting scams and protecting their personal data.",
+  },
+  {
+    id: 4,
+    question: "What will my child actually walk away with? ",
+    answer:
+      "A certificate of completion, real presentation experience, a foundational understanding of land as a wealth-building asset, practical cybersecurity knowledge, and a peer network of other future-focused teens.",
+  },
+  {
+    id: 5,
+    question: "Is this worth the time commitment?",
+    answer: "Two sessions a week for four weeks, about the same time most teens spend on their phones in a single day. The difference is what they have to show for it afterward.",
+  },
+];
+
 export interface Partner {
   id: string;
   name: string;

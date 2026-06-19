@@ -34,7 +34,7 @@
 
 .weekCard {
   background: #fbfaf9;
-  padding: 80px 24px 24px 24px;
+  padding: 40px 24px 24px 24px;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
@@ -60,6 +60,14 @@
   font-size: 14px;
   color: #6d7378;
   padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.otherTexts {
+  font-size: 14px;
+  color: #6d7378;
   position: relative;
   line-height: 1.6;
   font-family: "Instrument Sans", sans-serif;

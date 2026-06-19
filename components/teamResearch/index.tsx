@@ -9,7 +9,7 @@ const TeamResearchSection: React.FC = () => {
     <section className={styles.researchSection}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Projects</h2>
+          <h2 className={styles.title}>Past Projects</h2>
         </div>
 
         <div className={styles.grid}>

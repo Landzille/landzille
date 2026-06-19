@@ -51,7 +51,7 @@ const FeaturesSection: React.FC = () => {
               <Coins />
             </div>
             <h3 className={styles.cardTitle}>Parental Engagement</h3>
-            <p className={styles.cardSubtitle}>We invited parents to:</p>
+            <p className={styles.cardSubtitle}>We invite parents to:</p>
             <ul className={styles.bulletList}>
               <li>Join exclusive webinars on land investment</li>
               <li>Attend the field trip & closing graduation</li>

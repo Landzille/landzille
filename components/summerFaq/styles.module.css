@@ -4,17 +4,16 @@
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 
 .heading {
-  color: #1a1a1a;
+  color: #2F6A50;
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
-
   margin: 0 0 48px 0;
 }
 

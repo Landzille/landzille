@@ -13,8 +13,7 @@ export default function SummerFaq() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>ANSWERING THE QUESTIONS YOU HAVEN'T ASKED YET
-        </h2>
+        <h2 className={styles.heading}>Answering the Questions You Haven&apos;t Asked Yet</h2>
 
         <div className={styles.list}>
           {summerFaqs.map((faq, index) => {

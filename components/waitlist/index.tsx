@@ -73,7 +73,7 @@ const SummerWaitlistSection: React.FC = () => {
 
         <div className={styles.formWrapper}>
           <h2 className={styles.title}>
-            Ready to Join Next Year&apos;s Cohort?
+            Ready to Join This Year&apos;s Cohort?
           </h2>
           <p className={styles.description}>
             If you&apos;re a student, parent, or educator and want to be

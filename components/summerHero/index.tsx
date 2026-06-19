@@ -104,7 +104,7 @@ export const SummerHero: React.FC = () => {
           {/* Waitlist Form */}
           <div className={styles.formCard}>
             <h2 className={formStyles.title}>
-              Ready to Join Next Year&apos;s Cohort?
+              Ready to Join This Year&apos;s Cohort?
             </h2>
             <p className={formStyles.description}>
               If you&apos;re a student, parent, or educator and want to be

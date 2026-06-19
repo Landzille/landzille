@@ -81,7 +81,7 @@ export const SummerHero: React.FC = () => {
             <div className={styles.details}>
               <div className={styles.detailItem}>
                 <span className={styles.label}>
-                  In Partnership with Skillweed
+                  <b>In Partnership with SKILLWEED</b>
                 </span>
               </div>
 

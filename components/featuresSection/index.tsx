@@ -16,7 +16,7 @@ const FeaturesSection: React.FC = () => {
             </div>
             <h3 className={styles.cardTitle}>Mentorship & Access</h3>
             <p className={styles.cardSubtitle}>
-              Throughout the internship, students had:
+              Throughout the internship, students will have:
             </p>
             <ul className={styles.bulletList}>
               <li>Weekly check-ins with Landzille coaches</li>
@@ -66,9 +66,7 @@ const FeaturesSection: React.FC = () => {
             </div>
             <h3 className={styles.cardTitle}>Field Trip</h3>
             <p className={styles.cardDescription}>
-              The program wrapped up on July 20th, 2025, with a field trip to
-              Cooke County, Gainesville TX; where students connected with the
-              land in a tangible, unforgettable way.
+              A date will be communicated towards the end of the summer program
             </p>
           </div>
         </div>

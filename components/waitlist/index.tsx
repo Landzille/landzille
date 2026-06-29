@@ -127,10 +127,10 @@ const SummerWaitlistSection: React.FC = () => {
 
             <button
               type="submit"
-              disabled={status === "loading"}
+              disabled={true}
               className={styles.submitButton}
             >
-              {status === "loading" ? "Joining..." : "Join Waitlist"}
+              {status === "loading" ? "Joining..." : "Closed"}
             </button>
           </form>
 

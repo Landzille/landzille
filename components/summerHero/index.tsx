@@ -158,10 +158,10 @@ export const SummerHero: React.FC = () => {
 
               <button
                 type="submit"
-                disabled={status === "loading"}
+                disabled={true}
                 className={formStyles.submitButton}
               >
-                {status === "loading" ? "Joining..." : "Join Waitlist"}
+                {status === "loading" ? "Joining..." : "Closed"}
               </button>
             </form>
 

@@ -75,14 +75,14 @@ const DownloadMagazine: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.colOne}>
         <Image
-          src="/assets/magazines/I-am-land-15.png"
+          src="/assets/magazines/I-am-land-16.jpg"
           width={646}
           height={762}
           alt="download"
         />
       </div>
       <div className={styles.colTwo}>
-        <h2>Download Landzille&apos;s e - Magazine (June Edition)</h2>
+        <h2>Download Landzille&apos;s e - Magazine (July Edition)</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.nameRow}>
             <input

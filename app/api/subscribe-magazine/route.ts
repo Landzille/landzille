@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(
           {
             message: "Magazine download started!",
-            downloadUrl: "/downloads/magazines/I-am-land-heat-season.pdf",
+            downloadUrl: "/downloads/magazines/i-am-land-17.pdf",
           },
           { status: 200 }
         );
@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         message: "Successfully subscribed! Your download will begin shortly.",
-        downloadUrl: "/downloads/magazines/I-am-land-heat-season.pdf",
+        downloadUrl: "/downloads/magazines/i-am-land-17.pdf",
       },
       { status: 200 }
     );

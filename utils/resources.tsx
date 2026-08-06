@@ -9,18 +9,41 @@ interface Resource {
 export const allResources: Resource[] = [
   {
     id: "",
-    title: "Grows North",
-    subtitle: "Why american cities expands Northward and what it means for North Texas",
-    image:"/assets/growsNorth.jpeg",
-    downloadUrl: "/downloads/resources/EveryCity_GrowsNorth.pdf"
+    title: "DFW Growth Corridors",
+    subtitle: "The next 15 years of land wealth creation",
+    image: "/assets/magazines/DFW_Growth-Corridor.jpeg",
+    downloadUrl: "/downloads/resources/DFW_Growth Corridor.pdf",
   },
   {
     id: "",
-    title:"The Land Legacy Blueprint",
-    subtitle: "A global playbook for building wwealth, freedom & legacy through land",
+    title: "North Texas Infrastructure & Economic Development Atlas",
+    subtitle: "Major projects across 18 counties within 60miles of Dallas",
+    image: "/assets/magazines/DFW_TXDOT.jpeg",
+    downloadUrl: "/downloads/resources/DFW_TXDOT.pdf",
+  },
+  {
+    id: "",
+    title: "Growth Intelligence Index",
+    subtitle: "Predicting tommorrow's wealth through today's infrastructure",
+    image: "/assets/magazines/DFW_Growth.jpg",
+    downloadUrl: "/downloads/resources/DFW_Growth-Intelligence-Index.pdf",
+  },
+  {
+    id: "",
+    title: "Grows North",
+    subtitle:
+      "Why american cities expands Northward and what it means for North Texas",
+    image: "/assets/growsNorth.jpeg",
+    downloadUrl: "/downloads/resources/EveryCity_GrowsNorth.pdf",
+  },
+  {
+    id: "",
+    title: "The Land Legacy Blueprint",
+    subtitle:
+      "A global playbook for building wwealth, freedom & legacy through land",
     image: "/assets/resources/The-Land-Legacy-Blueprint.jpeg",
-    downloadUrl: "/downloads/resources/The_Land_Legacy_Blueprint.pdf"
-   },
+    downloadUrl: "/downloads/resources/The_Land_Legacy_Blueprint.pdf",
+  },
   {
     id: "",
     title: "LIQUID GOLD",

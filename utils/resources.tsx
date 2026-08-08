@@ -9,6 +9,44 @@ interface Resource {
 export const allResources: Resource[] = [
   {
     id: "",
+    title: "The Texas Agricultural Valuation Handbook",
+    subtitle: "Saving thousands in property taxes",
+    image: "/assets/magazines/3D5.jpeg",
+    downloadUrl:
+      "/downloads/resources/The Texas Agricultural Valuation Handbook.pdf",
+  },
+  {
+    id: "",
+    title: "The History of Community Builders",
+    subtitle: "From stoneage to AI era",
+    image: "/assets/magazines/3D1(4).jpeg",
+    downloadUrl: "/downloads/resources/The History Of Community Builders.pdf",
+  },
+  {
+    id: "",
+    title: "The Chisholm Trail",
+    subtitle: "Parkway Growth Corridor",
+    image: "/assets/magazines/3D4.jpeg",
+    downloadUrl:
+      "/downloads/resources/THE CHISHOLM TRAIL PARKWAY GROWTH CORRIDOR.pdf",
+  },
+  {
+    id: "",
+    title: "Land Empires",
+    subtitle: "From stone age to modern America",
+    image: "/assets/magazines/3D3.jpg",
+    downloadUrl: "/downloads/resources/LAND EMPIRES.pdf",
+  },
+  {
+    id: "",
+    title: "Legacy Nutrient Deductions",
+    subtitle: "Unlocking The Hidden Value Beneath Agricultural Land",
+    image: "/assets/magazines/3D2(3).jpeg",
+    downloadUrl:
+      "/downloads/resources/10 Proven Ways to Make Money With Your Land.pdf",
+  },
+  {
+    id: "",
     title: "DFW Growth Corridors",
     subtitle: "The next 15 years of land wealth creation",
     image: "/assets/magazines/DFW_Growth-Corridor.jpeg",

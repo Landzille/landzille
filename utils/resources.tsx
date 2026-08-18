@@ -7,6 +7,14 @@ interface Resource {
 }
 
 export const allResources: Resource[] = [
+   {
+    id: "",
+    title: "Everybody Can Build Wealth. You Can Too.",
+    subtitle: "A Simple Land Wealth Framework For Everyday People",
+    image: "/assets/magazines/Everybody_Can_Build_Wealth.jpeg",
+    downloadUrl:
+      "/downloads/resources/Everybody_Can_Build_Wealth.pdf",
+  },
   {
     id: "",
     title: "The Texas Agricultural Valuation Handbook",

@@ -27,7 +27,7 @@ const GallerySection: React.FC = () => {
         </div>
         <div className={styles.videoSection}>
           <iframe
-            src="https://www.youtube.com/embed/S6_90d98zR0?si=yoGUA44Jov0dWG0"
+            src="https://www.youtube.com/embed/HxiWIuUA6fA?si=z4z5bMMRUJ5tyc_m"
             title="YouTube video player"
             allow="autoplay; encrypted-media"
             allowFullScreen

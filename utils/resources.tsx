@@ -1,9 +1,27 @@
-interface Resource {
+export type InvestorStage =
+  | "New Investor"
+  | "Land IQ"
+  | "Spot the Growth"
+  | "Unlock Land Value";
+
+export type ResourceType = "Magazine" | "Report" | "Guide" | "Handbook";
+
+export type ResourceTag =
+  | "DFW Growth"
+  | "Infrastructure"
+  | "Chisholm Trail"
+  | "Land Empires"
+  | "Community Builders";
+
+export interface Resource {
   id: string;
   title: string;
   subtitle?: string;
   image: string;
   downloadUrl: string;
+  resourceType: ResourceType;
+  investorStage?: InvestorStage;
+  tags?: ResourceTag[];
 }
 
 export const allResources: Resource[] = [
@@ -22,6 +40,8 @@ export const allResources: Resource[] = [
     image: "/assets/magazines/3D5.jpeg",
     downloadUrl:
       "/downloads/resources/The Texas Agricultural Valuation Handbook.pdf",
+    resourceType: "Handbook",
+    investorStage: "Unlock Land Value",
   },
   {
     id: "",
@@ -29,6 +49,9 @@ export const allResources: Resource[] = [
     subtitle: "From stoneage to AI era",
     image: "/assets/magazines/3D1(4).jpeg",
     downloadUrl: "/downloads/resources/The History Of Community Builders.pdf",
+    resourceType: "Magazine",
+    investorStage: "Land IQ",
+    tags: ["Community Builders"],
   },
   {
     id: "",
@@ -37,6 +60,9 @@ export const allResources: Resource[] = [
     image: "/assets/magazines/3D4.jpeg",
     downloadUrl:
       "/downloads/resources/THE CHISHOLM TRAIL PARKWAY GROWTH CORRIDOR.pdf",
+    resourceType: "Magazine",
+    investorStage: "Spot the Growth",
+    tags: ["Chisholm Trail"],
   },
   {
     id: "",
@@ -44,6 +70,9 @@ export const allResources: Resource[] = [
     subtitle: "From stone age to modern America",
     image: "/assets/magazines/3D3.jpg",
     downloadUrl: "/downloads/resources/LAND EMPIRES.pdf",
+    resourceType: "Magazine",
+    investorStage: "Land IQ",
+    tags: ["Land Empires"],
   },
   {
     id: "",
@@ -52,6 +81,8 @@ export const allResources: Resource[] = [
     image: "/assets/magazines/3D2(3).jpeg",
     downloadUrl:
       "/downloads/resources/10 Proven Ways to Make Money With Your Land.pdf",
+    resourceType: "Report",
+    investorStage: "Unlock Land Value",
   },
   {
     id: "",
@@ -59,6 +90,9 @@ export const allResources: Resource[] = [
     subtitle: "The next 15 years of land wealth creation",
     image: "/assets/magazines/DFW_Growth-Corridor.jpeg",
     downloadUrl: "/downloads/resources/DFW_Growth Corridor.pdf",
+    resourceType: "Report",
+    investorStage: "Spot the Growth",
+    tags: ["DFW Growth"],
   },
   {
     id: "",
@@ -66,6 +100,9 @@ export const allResources: Resource[] = [
     subtitle: "Major projects across 18 counties within 60miles of Dallas",
     image: "/assets/magazines/DFW_TXDOT.jpeg",
     downloadUrl: "/downloads/resources/DFW_TXDOT.pdf",
+    resourceType: "Report",
+    investorStage: "Spot the Growth",
+    tags: ["Infrastructure", "DFW Growth"],
   },
   {
     id: "",
@@ -73,6 +110,9 @@ export const allResources: Resource[] = [
     subtitle: "Predicting tommorrow's wealth through today's infrastructure",
     image: "/assets/magazines/DFW_Growth.jpg",
     downloadUrl: "/downloads/resources/DFW_Growth-Intelligence-Index.pdf",
+    resourceType: "Report",
+    investorStage: "Spot the Growth",
+    tags: ["DFW Growth", "Infrastructure"],
   },
   {
     id: "",
@@ -81,6 +121,8 @@ export const allResources: Resource[] = [
       "Why american cities expands Northward and what it means for North Texas",
     image: "/assets/growsNorth.jpeg",
     downloadUrl: "/downloads/resources/EveryCity_GrowsNorth.pdf",
+    resourceType: "Report",
+    investorStage: "Land IQ",
   },
   {
     id: "",
@@ -89,6 +131,7 @@ export const allResources: Resource[] = [
       "A global playbook for building wwealth, freedom & legacy through land",
     image: "/assets/resources/The-Land-Legacy-Blueprint.jpeg",
     downloadUrl: "/downloads/resources/The_Land_Legacy_Blueprint.pdf",
+    resourceType: "Guide",
   },
   {
     id: "",
@@ -97,6 +140,7 @@ export const allResources: Resource[] = [
       "How Water is Making North Texas The Greatest Land Opportunity In America",
     image: "/assets/resources/3D (24).jpg.jpeg",
     downloadUrl: "/downloads/resources/Liquid Gold.pdf",
+    resourceType: "Report",
   },
   {
     id: "1",
@@ -104,6 +148,7 @@ export const allResources: Resource[] = [
     subtitle: "Top 20 Reasons to Invest",
     image: "/assets/resources/roxton-texas.jpg",
     downloadUrl: "/downloads/resources/roxton-texas-1.pdf",
+    resourceType: "Guide",
   },
   {
     id: "2",
@@ -111,6 +156,7 @@ export const allResources: Resource[] = [
     subtitle: "The Next Investment Frontier in North Texas",
     image: "/assets/resources/leonard-texas.jpeg",
     downloadUrl: "/downloads/resources/leonard-texas.pdf",
+    resourceType: "Guide",
   },
   {
     id: "3",
@@ -118,6 +164,7 @@ export const allResources: Resource[] = [
     subtitle: "Story of a hidden Cooke county Gem",
     image: "/assets/resources/menuster.jpeg",
     downloadUrl: "/downloads/resources/i-am-muenster.pdf",
+    resourceType: "Guide",
   },
   {
     id: "4",
@@ -125,6 +172,8 @@ export const allResources: Resource[] = [
     subtitle: "Download the ebook below",
     image: "/assets/resources/north-texas.jpeg",
     downloadUrl: "/downloads/resources/north-texas-growth-engine.pdf",
+    resourceType: "Guide",
+    tags: ["DFW Growth"],
   },
   {
     id: "5",
@@ -132,6 +181,7 @@ export const allResources: Resource[] = [
     subtitle: "Download the ebook below",
     image: "/assets/resources/gainesville.jpeg",
     downloadUrl: "/downloads/resources/reasons-to-invest-in-gainesville.pdf",
+    resourceType: "Guide",
   },
   {
     id: "6",
@@ -140,6 +190,8 @@ export const allResources: Resource[] = [
     subtitle: "Download the ebook below",
     image: "/assets/resources/infrastructure.jpg",
     downloadUrl: "/downloads/resources/top-50-infrastructure-expansions.pdf",
+    resourceType: "Report",
+    tags: ["Infrastructure", "DFW Growth"],
   },
   {
     id: "7",
@@ -147,6 +199,7 @@ export const allResources: Resource[] = [
     subtitle: "Download the ebook below",
     image: "/assets/resources/internship.jpeg",
     downloadUrl: "/downloads/resources/1-month-internship-plan.pdf",
+    resourceType: "Guide",
   },
   {
     id: "8",
@@ -155,6 +208,7 @@ export const allResources: Resource[] = [
     image: "/assets/resources/invest-noe.jpg",
     downloadUrl:
       "/downloads/resources/top-reasons-to-invest-in-land-in-top-cities.pdf",
+    resourceType: "Guide",
   },
   {
     id: "9",
@@ -163,6 +217,7 @@ export const allResources: Resource[] = [
     image: "/assets/resources/colleges.jpg",
     downloadUrl:
       "/downloads/resources/colleges-as-catalysts-for-land-development.pdf",
+    resourceType: "Report",
   },
   {
     id: "10",
@@ -170,6 +225,7 @@ export const allResources: Resource[] = [
     subtitle: "Download the ebook below",
     image: "/assets/resources/strategy.jpg",
     downloadUrl: "/downloads/resources/strategic-land-lease-playbook.pdf",
+    resourceType: "Guide",
   },
   {
     id: "11",
@@ -178,6 +234,9 @@ export const allResources: Resource[] = [
     image: "/assets/resources/impact.jpg",
     downloadUrl:
       "/downloads/resources/the-impact-of-airports-on-economic-development.pdf",
+    resourceType: "Report",
+    investorStage: "Unlock Land Value",
+    tags: ["Infrastructure"],
   },
   {
     id: "12",
@@ -186,6 +245,9 @@ export const allResources: Resource[] = [
     image: "/assets/resources/infrastructure.jpg",
     downloadUrl:
       "/downloads/resources/the-infrastructure-investment-and-jobs-act.pdf",
+    resourceType: "Report",
+    investorStage: "Unlock Land Value",
+    tags: ["Infrastructure"],
   },
   {
     id: "13",
@@ -194,6 +256,9 @@ export const allResources: Resource[] = [
     image: "/assets/resources/road.jpg",
     downloadUrl:
       "/downloads/resources/the-road-to-progress-infrastructure-development.pdf",
+    resourceType: "Report",
+    investorStage: "Unlock Land Value",
+    tags: ["Infrastructure"],
   },
   {
     id: "14",
@@ -202,6 +267,8 @@ export const allResources: Resource[] = [
     image: "/assets/resources/impact-farm.jpg",
     downloadUrl:
       "/downloads/resources/the-impact-of-farming-on-economic-development-in-north-texas.pdf",
+    resourceType: "Report",
+    investorStage: "Unlock Land Value",
   },
   {
     id: "15",
@@ -210,6 +277,8 @@ export const allResources: Resource[] = [
     image: "/assets/resources/impact-lakes.jpeg",
     downloadUrl:
       "/downloads/resources/the-impact-of-lakes-on-real-estate-development-in-the-usa.pdf",
+    resourceType: "Report",
+    investorStage: "Unlock Land Value",
   },
   {
     id: "16",
@@ -219,6 +288,8 @@ export const allResources: Resource[] = [
     image: "/assets/resources/conductor.jpeg",
     downloadUrl:
       "/downloads/resources/the-impact-of-semiconductor-on-real-estate-development-in-the-united-states.pdf",
+    resourceType: "Report",
+    investorStage: "Unlock Land Value",
   },
   {
     id: "17",
@@ -226,5 +297,7 @@ export const allResources: Resource[] = [
     subtitle: "Download the Foundations of Successful Land Investment ebook",
     image: "/assets/resources/investment-101.jpg",
     downloadUrl: "/downloads/resources/Land-ownership.pdf",
+    resourceType: "Guide",
+    investorStage: "New Investor",
   },
 ];

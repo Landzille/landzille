@@ -1,8 +1,8 @@
 import AboutResources from "@/components/aboutResouces";
+import BrowseResources from "@/components/browseResources";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import OtherPageHero from "@/components/otherHero";
-import ResourcesSection from "@/components/resourceSection";
 
 const ResourcePage = () => {
   return (
@@ -10,7 +10,7 @@ const ResourcePage = () => {
       <Header />
       <OtherPageHero headerText="Resources" />
       <AboutResources />
-      <ResourcesSection />
+      <BrowseResources />
       <Footer />
     </div>
   );

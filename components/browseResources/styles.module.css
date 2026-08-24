@@ -1,0 +1,397 @@
+.browseSection {
+  padding: 100px 0 120px;
+  background-color: #fbfaf9;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 16px 0;
+}
+
+.subtitle {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  color: #6d7378;
+  max-width: 640px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+/* Search */
+.searchWrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9aa0a6;
+  display: flex;
+}
+
+.searchInput {
+  width: 100%;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 15px;
+  color: #1a1d1f;
+  background-color: #ffffff;
+  border: 1px solid #e5e2dd;
+  border-radius: 999px;
+  padding: 16px 24px 16px 56px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: #9aa0a6;
+}
+
+.searchInput:focus {
+  border-color: #2d5a4d;
+}
+
+/* Filter row */
+.filterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d5a4d;
+  background-color: #e9efe9;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  background-color: #dbe6db;
+}
+
+.pillActive {
+  background-color: #2d5a4d;
+  color: #ffffff;
+}
+
+.pillActive:hover {
+  background-color: #234839;
+}
+
+.dropdowns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.selectWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1d1f;
+  background-color: #ffffff;
+  border: 1.5px solid #1a1d1f;
+  border-radius: 999px;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.selectChevron {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1a1d1f;
+  pointer-events: none;
+  display: flex;
+}
+
+/* Grid + cards (matches existing resource card styling) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  border: 1px solid #f9f7f5;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 256px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.typeBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: rgba(26, 29, 31, 0.65);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2e3338;
+  margin: 0 0 8px 0;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.cardSubtitle {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  color: #6d7378;
+  line-height: 1.5;
+}
+
+.downloadLink {
+  width: 100%;
+  padding: 24px;
+  border-top: 1px solid #0000001a;
+  display: inline-flex;
+  font-family: "Instrument Sans", sans-serif;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2f6a4f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.downloadLink:hover {
+  color: #234839;
+  gap: 0.75rem;
+}
+
+.downloadLink svg {
+  transition: transform 0.3s ease;
+}
+
+.downloadLink:hover svg {
+  transform: translateY(2px);
+}
+
+.emptyState {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 15px;
+  color: #6d7378;
+  text-align: center;
+  padding: 64px 0;
+  border: 1px dashed #e5e2dd;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.paginationButton {
+  min-width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paginationButton:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+.paginationButton.active {
+  background-color: #2d5a4d;
+  border-color: #2d5a4d;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.paginationButton.active:hover {
+  background-color: #234839;
+  border-color: #234839;
+}
+
+.paginationArrow {
+  min-width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paginationArrow:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+.paginationArrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .browseSection {
+    padding: 64px 0 80px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .filterRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdowns {
+    width: 100%;
+  }
+
+  .selectWrapper,
+  .select {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .imageWrapper {
+    height: 240px;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .pagination {
+    gap: 0.375rem;
+  }
+
+  .paginationButton,
+  .paginationArrow {
+    min-width: 40px;
+    height: 40px;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: 200px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+}

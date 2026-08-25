@@ -32,6 +32,8 @@ export const allResources: Resource[] = [
     image: "/assets/resources/Everybody_Can_Build_Wealth.jpeg",
     downloadUrl:
       "/downloads/resources/Everybody_Can_Build_Wealth.pdf",
+    resourceType: "Guide",
+    investorStage: "New Investor",
   },
   {
     id: "",

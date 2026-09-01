@@ -41,8 +41,8 @@ const personas: Persona[] = [
   },
   {
     title: "I'm researching",
-    description: "Help me understand what actually makes land valuable.",
-    cta: "Understand what makes land valuable.",
+    description: "Understand what makes land valuable.",
+    cta: "Build your knowledge",
     href: "#stage-2",
   },
   {

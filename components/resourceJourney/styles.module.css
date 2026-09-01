@@ -1,0 +1,226 @@
+.stageSection {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.stageSection[data-alt="true"] {
+  background-color: #fbfaf9;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #2d5a4d;
+  background-color: #e9efe9;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.bundleName {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  color: #6d7378;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 4px 0;
+}
+
+.description {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  color: #6d7378;
+  max-width: 640px;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+}
+
+.sliderWrapper {
+  position: relative;
+}
+
+.sliderControls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.sliderArrow {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1d1f;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sliderArrow:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 400px;
+  scroll-snap-align: start;
+  border: 1px solid #e9e6e1;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fbfaf9;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 256px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2e3338;
+  margin: 0 0 8px 0;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.cardSubtitle {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  color: #6d7378;
+  line-height: 1.5;
+}
+
+.downloadLink {
+  width: 100%;
+  padding: 24px;
+  border-top: 1px solid #0000001a;
+  display: inline-flex;
+  font-family: "Instrument Sans", sans-serif;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2f6a4f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.downloadLink:hover {
+  color: #234839;
+  gap: 0.75rem;
+}
+
+.downloadLink svg {
+  transition: transform 0.3s ease;
+}
+
+.downloadLink:hover svg {
+  transform: translateY(2px);
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    flex-basis: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stageSection {
+    padding: 56px 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .badgeRow {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .track {
+    gap: 1rem;
+  }
+
+  .card {
+    flex-basis: 85%;
+  }
+
+  .imageWrapper {
+    height: 240px;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+}

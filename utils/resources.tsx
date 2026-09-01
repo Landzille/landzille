@@ -38,7 +38,7 @@ export const allResources: Resource[] = [
   {
     id: "",
     title: "The Texas Agricultural Valuation Handbook",
-    subtitle: "Saving thousands in property taxes",
+    subtitle: "Saving Thousands in Property Taxes",
     image: "/assets/magazines/3D5.jpeg",
     downloadUrl:
       "/downloads/resources/The Texas Agricultural Valuation Handbook.pdf",
@@ -48,7 +48,7 @@ export const allResources: Resource[] = [
   {
     id: "",
     title: "The History of Community Builders",
-    subtitle: "From stoneage to AI era",
+    subtitle: "From Stone Age to AI Era",
     image: "/assets/magazines/3D1(4).jpeg",
     downloadUrl: "/downloads/resources/The History Of Community Builders.pdf",
     resourceType: "Magazine",
@@ -69,7 +69,7 @@ export const allResources: Resource[] = [
   {
     id: "",
     title: "Land Empires",
-    subtitle: "From stone age to modern America",
+    subtitle: "From Stone Age to Modern America",
     image: "/assets/magazines/3D3.jpg",
     downloadUrl: "/downloads/resources/LAND EMPIRES.pdf",
     resourceType: "Magazine",
@@ -79,7 +79,7 @@ export const allResources: Resource[] = [
   {
     id: "",
     title: "Legacy Nutrient Deductions",
-    subtitle: "Unlocking The Hidden Value Beneath Agricultural Land",
+    subtitle: "Unlocking the Hidden Value Beneath Agricultural Land",
     image: "/assets/magazines/3D2(3).jpeg",
     downloadUrl:
       "/downloads/resources/10 Proven Ways to Make Money With Your Land.pdf",
@@ -89,7 +89,7 @@ export const allResources: Resource[] = [
   {
     id: "",
     title: "DFW Growth Corridors",
-    subtitle: "The next 15 years of land wealth creation",
+    subtitle: "The Next 15 Years of Land Wealth Creation",
     image: "/assets/magazines/DFW_Growth-Corridor.jpeg",
     downloadUrl: "/downloads/resources/DFW_Growth Corridor.pdf",
     resourceType: "Report",
@@ -99,7 +99,7 @@ export const allResources: Resource[] = [
   {
     id: "",
     title: "North Texas Infrastructure & Economic Development Atlas",
-    subtitle: "Major projects across 18 counties within 60miles of Dallas",
+    subtitle: "Major Projects Across 18 Counties Within 60 Miles of Dallas",
     image: "/assets/magazines/DFW_TXDOT.jpeg",
     downloadUrl: "/downloads/resources/DFW_TXDOT.pdf",
     resourceType: "Report",
@@ -109,7 +109,7 @@ export const allResources: Resource[] = [
   {
     id: "",
     title: "Growth Intelligence Index",
-    subtitle: "Predicting tommorrow's wealth through today's infrastructure",
+    subtitle: "Predicting Tomorrow's Wealth Through Today's Infrastructure",
     image: "/assets/magazines/DFW_Growth.jpg",
     downloadUrl: "/downloads/resources/DFW_Growth-Intelligence-Index.pdf",
     resourceType: "Report",
@@ -120,7 +120,7 @@ export const allResources: Resource[] = [
     id: "",
     title: "Grows North",
     subtitle:
-      "Why american cities expands Northward and what it means for North Texas",
+      "Why American Cities Expand Northward and What It Means for North Texas",
     image: "/assets/growsNorth.jpeg",
     downloadUrl: "/downloads/resources/EveryCity_GrowsNorth.pdf",
     resourceType: "Report",
@@ -163,7 +163,7 @@ export const allResources: Resource[] = [
   {
     id: "3",
     title: "I AM MUENSTER",
-    subtitle: "Story of a hidden Cooke county Gem",
+    subtitle: "Story of a Hidden Cooke County Gem",
     image: "/assets/resources/menuster.jpeg",
     downloadUrl: "/downloads/resources/i-am-muenster.pdf",
     resourceType: "Guide",

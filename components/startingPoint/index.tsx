@@ -41,32 +41,32 @@ const personas: Persona[] = [
   },
   {
     title: "I'm researching",
-    description: "Teach me how to spot opportunity before it's priced in.",
-    cta: "Spot the opportunity",
+    description: "Help me understand what actually makes land valuable.",
+    cta: "Understand what makes land valuable.",
     href: "#stage-2",
   },
   {
     title: "I'm looking at locations",
-    description: "Teach me how to spot opportunity before it's priced in.",
-    cta: "Spot the opportunity",
+    description: "Learn where opportunity is forming.",
+    cta: "Explore growth",
     href: "#stage-3",
   },
   {
     title: "I'm ready to buy",
-    description: "Teach me how to spot opportunity before it's priced in.",
-    cta: "Spot the opportunity",
+    description: "Go deeper into specific markets.",
+    cta: "Explore markets",
     href: "#stage-4",
   },
   {
     title: "I already own land",
-    description: "Teach me how to spot opportunity before it's priced in.",
-    cta: "Spot the opportunity",
+    description: "Discover what else your land can do for you.",
+    cta: "Discover more value",
     href: "#stage-5",
   },
   {
     title: "I'm an experienced investor",
-    description: "Teach me how to spot opportunity before it's priced in.",
-    cta: "Spot the opportunity",
+    description: "For investors ready to think beyond one property.",
+    cta: "Build your strategy",
     href: "#stage-6",
   },
 ];
@@ -77,8 +77,8 @@ const StartingPoint: React.FC = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>Choose your starting point</h1>
         <p className={styles.subtitle}>
-          Six kinds of investor, six different paths. Pick the one that
-          sounds like you.
+          Six kinds of investor, six different paths. Pick the one that sounds
+          like you.
         </p>
 
         <div className={styles.grid}>

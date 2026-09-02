@@ -67,7 +67,7 @@ export default function Header() {
         </nav>
 
         <Link href="/contact" className={styles.ctaButton}>
-          Book a Consultation
+          Contact Us
         </Link>
 
         <button

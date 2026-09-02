@@ -128,7 +128,7 @@ export default function Header() {
                 className={styles.mobileCtaButton}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Book a Consultation
+                Contact Us
               </Link>
             </li>
           </ul>

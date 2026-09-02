@@ -12,7 +12,7 @@ export const allMagazines: Magazines[] = [
     title: "I am Land - Vol 18",
     subtitle: "The Closing",
     image: "/assets/magazines/I-am-land-18.jpg",
-    downloadUrl: "/downloads/magazines/I-am-land-18.0.pdf",
+    downloadUrl: "/downloads/magazines/LANDZILLE_ E-Magazine-18.0.pdf",
   },
   {
     id: "17",

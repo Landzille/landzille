@@ -35,7 +35,6 @@ export const navItems: NavItem[] = [
     hasDropdown: true,
     dropdownItems: [
       { label: "About Us", href: "/about" },
-      { label: "Contact Us", href: "/contact" },
       { label: "Waitlist", href: "/waitlist" },
     ],
   },
@@ -61,10 +60,6 @@ export const newNavItems = [
   {
     label: "About Us",
     href: "/about",
-  },
-  {
-    label: "Contact Us",
-    href: "/contact",
   },
 ];
 

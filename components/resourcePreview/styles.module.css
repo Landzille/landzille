@@ -185,6 +185,7 @@
   .actions {
     flex-direction: row;
     width: 100%;
+    flex: 0;
   }
 
   .actionBtn {
@@ -200,6 +201,10 @@
   .hero,
   .more {
     max-width: 90%;
+  }
+
+  .previewCard {
+    width: 100%;
   }
 
   .title {

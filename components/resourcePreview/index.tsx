@@ -5,15 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import HeaderNew from "@/components/headerNew";
-import Arrow from "@/svg/arrow";
 import type { ReadableResource } from "@/utils/readableResources";
 import styles from "./styles.module.css";
+import ArrowWhite from "@/svg/arrow-white";
 
 const PdfViewer = dynamic(() => import("@/components/pdfViewer"), {
   ssr: false,
-  loading: () => (
-    <div className={styles.previewFallback}>Loading preview…</div>
-  ),
+  loading: () => <div className={styles.previewFallback}>Loading preview…</div>,
 });
 
 const BackIcon = () => (
@@ -64,11 +62,31 @@ const trackDownload = (resource: ReadableResource) => {
   });
 };
 
+const legacyCopy = (text: string) => {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  let ok = false;
+  try {
+    ok = document.execCommand("copy");
+  } catch {
+    ok = false;
+  }
+  document.body.removeChild(textarea);
+  return ok;
+};
+
 const ResourcePreview: React.FC<Props> = ({ resource, others }) => {
   const [copied, setCopied] = useState(false);
+  const [shareFailed, setShareFailed] = useState(false);
 
   const handleShare = async () => {
     const url = window.location.href;
+
     if (typeof navigator.share === "function") {
       try {
         await navigator.share({
@@ -76,14 +94,24 @@ const ResourcePreview: React.FC<Props> = ({ resource, others }) => {
           text: resource.subtitle,
           url,
         });
-      } catch {
-        // user cancelled the share sheet
+        return;
+      } catch (err) {
+        if ((err as Error)?.name === "AbortError") return;
       }
-      return;
     }
-    await navigator.clipboard.writeText(url);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+      } else if (!legacyCopy(url)) {
+        throw new Error("Copy failed");
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setShareFailed(true);
+      setTimeout(() => setShareFailed(false), 3000);
+    }
   };
 
   return (
@@ -126,7 +154,11 @@ const ResourcePreview: React.FC<Props> = ({ resource, others }) => {
               className={`${styles.actionBtn} ${styles.shareBtn}`}
             >
               {copied ? <CheckIcon /> : <ShareIcon />}
-              {copied ? "Copied" : "Share"}
+              {copied
+                ? "Copied"
+                : shareFailed
+                  ? "Couldn't share — copy the URL"
+                  : "Share"}
             </button>
             <a
               href={resource.pdfUrl}
@@ -135,7 +167,7 @@ const ResourcePreview: React.FC<Props> = ({ resource, others }) => {
               className={`${styles.actionBtn} ${styles.saveBtn}`}
             >
               Download Now
-              <Arrow />
+              <ArrowWhite />
             </a>
           </div>
         </div>

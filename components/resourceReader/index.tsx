@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import Arrow from "@/svg/arrow";
 import type { ReadableResource } from "@/utils/readableResources";
 import styles from "./styles.module.css";
+import ArrowWhite from "@/svg/arrow-white";
 
 const PdfViewer = dynamic(() => import("@/components/pdfViewer"), {
   ssr: false,
@@ -39,7 +39,10 @@ const ResourceReader: React.FC<Props> = ({ resource }) => {
     <div className={styles.page}>
       <header className={styles.header}>
         <div className={styles.headerLeft}>
-          <Link href={`/resources/${resource.slug}`} className={styles.backLink}>
+          <Link
+            href={`/resources/${resource.slug}`}
+            className={styles.backLink}
+          >
             <BackIcon /> Back to preview
           </Link>
           <span className={styles.title}>{resource.title}</span>
@@ -51,7 +54,7 @@ const ResourceReader: React.FC<Props> = ({ resource }) => {
           className={styles.downloadLink}
         >
           Download Now
-          <Arrow />
+          <ArrowWhite />
         </a>
       </header>
 

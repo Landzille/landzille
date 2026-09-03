@@ -1,0 +1,108 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fbfaf9;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e9e6e1;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f6a4f;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.backLink:hover {
+  color: #234839;
+}
+
+.title {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1d1f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.downloadLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2d5a4d;
+  border-radius: 999px;
+  padding: 10px 20px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.downloadLink:hover {
+  background-color: #234839;
+}
+
+.viewerWrap {
+  flex: 1;
+  min-height: 0;
+  padding: 20px;
+}
+
+.viewerCard {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e9e6e1;
+}
+
+.loading {
+  padding: 120px 24px;
+  text-align: center;
+  font-family: "Instrument Sans", sans-serif;
+  color: #6d7378;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .viewerWrap {
+    padding: 0;
+  }
+
+  .viewerCard {
+    border-radius: 0;
+    border: none;
+  }
+}

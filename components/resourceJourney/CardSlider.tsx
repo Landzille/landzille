@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./styles.module.css";
 import Arrow from "@/svg/arrow";
 import type { Resource } from "@/utils/resources";
+import { slugify } from "@/utils/readableResources";
 
 const ChevronLeft = () => (
   <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
@@ -72,28 +73,31 @@ const CardSlider: React.FC<CardSliderProps> = ({ resources }) => {
       <div className={styles.track} ref={trackRef}>
         {resources.map((resource) => (
           <div key={resource.title} className={styles.card} data-slide="true">
-            <div className={styles.imageWrapper}>
-              <Image
-                src={resource.image}
-                alt={resource.title}
-                fill
-                className={styles.image}
-                sizes="(max-width: 768px) 80vw, 400px"
-              />
-            </div>
-            <div className={styles.content}>
-              <h3 className={styles.cardTitle}>{resource.title}</h3>
-              {resource.subtitle && (
-                <p className={styles.cardSubtitle}>{resource.subtitle}</p>
-              )}
-            </div>
             <Link
-              href={resource.downloadUrl}
-              className={styles.downloadLink}
-              target="_blank"
-              download
+              href={`/resources/${slugify(resource.title)}`}
+              className={styles.previewLink}
             >
-              Download Now
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={resource.image}
+                  alt={resource.title}
+                  fill
+                  className={styles.image}
+                  sizes="(max-width: 768px) 80vw, 400px"
+                />
+              </div>
+              <div className={styles.content}>
+                <h3 className={styles.cardTitle}>{resource.title}</h3>
+                {resource.subtitle && (
+                  <p className={styles.cardSubtitle}>{resource.subtitle}</p>
+                )}
+              </div>
+            </Link>
+            <Link
+              href={`/resources/${slugify(resource.title)}`}
+              className={styles.downloadLink}
+            >
+              View Resource
               <Arrow />
             </Link>
           </div>

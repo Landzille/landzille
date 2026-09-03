@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./styles.module.css";
 import Arrow from "@/svg/arrow";
 import { allMagazines } from "@/utils/e-magazines";
+import { slugify } from "@/utils/readableResources";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -42,28 +43,31 @@ const MagazinesSection: React.FC = () => {
         <div className={styles.grid}>
           {currentResources.map((resource) => (
             <div key={resource.id} className={styles.card}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={resource.image}
-                  alt={resource.title}
-                  fill
-                  className={styles.image}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className={styles.content}>
-                <h3 className={styles.cardTitle}>{resource.title}</h3>
-                {resource.subtitle && (
-                  <p className={styles.subtitle}>{resource.subtitle}</p>
-                )}
-              </div>
               <Link
-                href={resource.downloadUrl}
-                className={styles.downloadLink}
-                target="_blank"
-                download={true}
+                href={`/resources/${slugify(resource.title)}`}
+                className={styles.previewLink}
               >
-                Download Now
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src={resource.image}
+                    alt={resource.title}
+                    fill
+                    className={styles.image}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className={styles.content}>
+                  <h3 className={styles.cardTitle}>{resource.title}</h3>
+                  {resource.subtitle && (
+                    <p className={styles.subtitle}>{resource.subtitle}</p>
+                  )}
+                </div>
+              </Link>
+              <Link
+                href={`/resources/${slugify(resource.title)}`}
+                className={styles.downloadLink}
+              >
+                View Magazine
                 <Arrow />
               </Link>
             </div>

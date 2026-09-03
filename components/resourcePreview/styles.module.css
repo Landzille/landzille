@@ -1,0 +1,208 @@
+.page {
+  background-color: #fbfaf9;
+  min-height: 100vh;
+}
+
+.hero {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f6a4f;
+  text-decoration: none;
+  margin-bottom: 28px;
+}
+
+.backLink:hover {
+  color: #234839;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 12px 0;
+  max-width: 760px;
+}
+
+.subtitle {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  color: #6d7378;
+  max-width: 640px;
+  margin: 0 0 40px 0;
+}
+
+.previewRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.previewCard {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 1px solid #e9e6e1;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.previewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e9e6e1;
+}
+
+.previewLabel {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6d7378;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.previewOpen {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f6a4f;
+  text-decoration: none;
+}
+
+.previewOpen:hover {
+  color: #234839;
+}
+
+.previewFallback {
+  padding: 120px 24px;
+  text-align: center;
+  font-family: "Instrument Sans", sans-serif;
+  color: #6d7378;
+}
+
+.actions {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 14px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.shareBtn {
+  background-color: #ffffff;
+  color: #1a1d1f;
+  border: 1px solid #d1d5db;
+}
+
+.shareBtn:hover {
+  background-color: #f3f4f6;
+}
+
+.saveBtn {
+  background-color: #2d5a4d;
+  color: #ffffff;
+}
+
+.saveBtn:hover {
+  background-color: #234839;
+}
+
+.more {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 0 100px;
+}
+
+.moreHeading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 24px 0;
+}
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.moreCard {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.moreImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.moreTitle {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1d1f;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .previewRow {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .actionBtn {
+    flex: 1;
+  }
+
+  .moreGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .more {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

@@ -2,6 +2,9 @@
 import { useState, FormEvent } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { slugify } from "@/utils/readableResources";
+
+const MAGAZINE_TITLE = "I am Land - Vol 17";
 
 const DownloadMagazine: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +26,11 @@ const DownloadMagazine: React.FC = () => {
   };
 
   const handleDownload = (downloadUrl: string) => {
+    window.gtag?.("event", "resource_download", {
+      resource_id: slugify(MAGAZINE_TITLE),
+      resource_title: MAGAZINE_TITLE,
+    });
+
     const link = document.createElement("a");
     link.href = downloadUrl;
     link.download = "i-am-land-17.pdf";

@@ -35,7 +35,7 @@ export default function HeaderNew() {
         </nav>
 
         <Link href="/contact" className={styles.ctaButton}>
-          Book a Consultation
+          Contact Us
         </Link>
 
         <button
@@ -59,7 +59,7 @@ export default function HeaderNew() {
             ))}
             <li>
               <Link href="/contact" className={styles.mobileCtaButton}>
-                Book a Consultation
+                Contact Us
               </Link>
             </li>
           </ul>

@@ -1,6 +1,7 @@
 import HeaderNew from "@/components/headerNew";
 import styles from "./styles.module.css";
 import Footer from "@/components/footer";
+import TrackedContactLink from "@/components/trackedContactLink";
 
 export default function TermsOfService() {
   return (
@@ -313,15 +314,27 @@ export default function TermsOfService() {
               <p>Allen, TX 75013</p>
               <p>
                 Email:{" "}
-                <a href="mailto:info@landzille.com" className={styles.link}>
+                <TrackedContactLink
+                  href="mailto:info@landzille.com"
+                  eventName="email_click"
+                  value="info@landzille.com"
+                  location="terms"
+                  className={styles.link}
+                >
                   info@landzille.com
-                </a>
+                </TrackedContactLink>
               </p>
               <p>
                 Phone:{" "}
-                <a href="tel:+12146498495" className={styles.link}>
+                <TrackedContactLink
+                  href="tel:+12146498495"
+                  eventName="phone_click"
+                  value="+12146498495"
+                  location="terms"
+                  className={styles.link}
+                >
                   +1 (214) 649-8495
-                </a>
+                </TrackedContactLink>
               </p>
             </div>
           </section>

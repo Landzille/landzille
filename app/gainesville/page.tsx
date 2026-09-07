@@ -6,11 +6,13 @@ import GainesvilleHero from "@/components/gainesvilleHero";
 import GalleryTwoSection from "@/components/galleryTwo";
 import Header from "@/components/header";
 import OtherHeroSection from "@/components/otherHeros";
+import PropertyViewTracker from "@/components/propertyViewTracker";
 import React from "react";
 
 const Gainesville = () => {
   return (
     <div>
+      <PropertyViewTracker propertyName="Gainesville" />
       <Header />
       <GainesvilleHero />
       <WhyInvest />

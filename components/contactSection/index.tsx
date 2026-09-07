@@ -43,6 +43,10 @@ export default function ContactSection() {
     document.head.appendChild(script);
   }, []);
 
+  useEffect(() => {
+    window.gtag?.("event", "contact_page_visit", {});
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -81,6 +85,7 @@ export default function ContactSection() {
       if (response.ok) {
         setStatus("success");
         setMessage("Thank you! We'll get back to you soon.");
+        window.gtag?.("event", "form_submit", { form_name: "contact" });
         setFormData({ firstName: "", lastName: "", email: "", message: "" });
       } else {
         setStatus("error");
@@ -103,7 +108,17 @@ export default function ContactSection() {
           <div className={styles.infoCards}>
             <div className={styles.infoCard}>
               <h4>Phone Number</h4>
-              <Link href="tel:+12146498495">+1 (214) 649 - 8495</Link>
+              <Link
+                href="tel:+12146498495"
+                onClick={() =>
+                  window.gtag?.("event", "phone_click", {
+                    location: "contact_page",
+                    phone_number: "+12146498495",
+                  })
+                }
+              >
+                +1 (214) 649 - 8495
+              </Link>
             </div>
 
             <div className={styles.infoCard}>
@@ -115,7 +130,17 @@ export default function ContactSection() {
 
             <div className={styles.infoCard}>
               <h4>Email</h4>
-              <Link href="mailto:info@landzille.com">info@landzille.com</Link>
+              <Link
+                href="mailto:info@landzille.com"
+                onClick={() =>
+                  window.gtag?.("event", "email_click", {
+                    location: "contact_page",
+                    email: "info@landzille.com",
+                  })
+                }
+              >
+                info@landzille.com
+              </Link>
             </div>
 
             <div className={styles.infoCard}>

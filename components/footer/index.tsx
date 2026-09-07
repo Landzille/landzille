@@ -30,6 +30,9 @@ const Footer: React.FC = () => {
       if (response.ok) {
         setStatus("success");
         setMessage("Thanks for subscribing!");
+        window.gtag?.("event", "newsletter_form_submit", {
+          form_location: "footer",
+        });
         setEmail(""); // Clear the input
       } else {
         setStatus("error");
@@ -153,10 +156,28 @@ const Footer: React.FC = () => {
               <p className={styles.address}>
                 825 Watters Creek Blvd Building M, Suite 250, Allen, TX 75013
               </p>
-              <a href="mailto:info@landzille.com" className={styles.email}>
+              <a
+                href="mailto:info@landzille.com"
+                className={styles.email}
+                onClick={() =>
+                  window.gtag?.("event", "email_click", {
+                    location: "footer",
+                    email: "info@landzille.com",
+                  })
+                }
+              >
                 info@landzille.com
               </a>
-              <a href="tel:+12146498495" className={styles.phone}>
+              <a
+                href="tel:+12146498495"
+                className={styles.phone}
+                onClick={() =>
+                  window.gtag?.("event", "phone_click", {
+                    location: "footer",
+                    phone_number: "+12146498495",
+                  })
+                }
+              >
                 +1 (214) 649 - 8495
               </a>
             </div>

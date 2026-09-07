@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(
           {
             message: "Magazine download started!",
-            downloadUrl: "/downloads/magazines/i-am-land-17.pdf",
+            downloadUrl: "/downloads/magazines/LANDZILLE_ E-Magazine-18.0.pdf",
           },
           { status: 200 }
         );
@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         message: "Successfully subscribed! Your download will begin shortly.",
-        downloadUrl: "/downloads/magazines/i-am-land-17.pdf",
+        downloadUrl: "/downloads/magazines/LANDZILLE_ E-Magazine-18.0.pdf",
       },
       { status: 200 }
     );

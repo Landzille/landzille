@@ -6,6 +6,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import HeaderNew from "@/components/headerNew";
 import type { ReadableResource } from "@/utils/readableResources";
+import ResourceDownloadButton from "@/components/resourceDownload/ResourceDownloadButton";
 import styles from "./styles.module.css";
 import ArrowWhite from "@/svg/arrow-white";
 
@@ -178,9 +179,13 @@ const ResourcePreview: React.FC<Props> = ({ resource, others }) => {
           <h2 className={styles.moreHeading}>More resources</h2>
           <div className={styles.moreGrid}>
             {others.map((other) => (
-              <Link
+              <ResourceDownloadButton
                 key={other.slug}
-                href={`/resources/${other.slug}`}
+                resourceId={other.slug}
+                resourceType="resource"
+                title={other.title}
+                fileUrl={`/resources/${other.slug}`}
+                kind="view"
                 className={styles.moreCard}
               >
                 <div className={styles.moreImageWrap}>
@@ -193,7 +198,7 @@ const ResourcePreview: React.FC<Props> = ({ resource, others }) => {
                   />
                 </div>
                 <span className={styles.moreTitle}>{other.title}</span>
-              </Link>
+              </ResourceDownloadButton>
             ))}
           </div>
         </div>

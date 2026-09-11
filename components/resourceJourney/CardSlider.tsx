@@ -1,11 +1,11 @@
 "use client";
 import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./styles.module.css";
 import Arrow from "@/svg/arrow";
 import type { Resource } from "@/utils/resources";
 import { slugify } from "@/utils/readableResources";
+import ResourceDownloadButton from "@/components/resourceDownload/ResourceDownloadButton";
 
 const ChevronLeft = () => (
   <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
@@ -71,37 +71,49 @@ const CardSlider: React.FC<CardSliderProps> = ({ resources }) => {
       )}
 
       <div className={styles.track} ref={trackRef}>
-        {resources.map((resource) => (
-          <div key={resource.title} className={styles.card} data-slide="true">
-            <Link
-              href={`/resources/${slugify(resource.title)}`}
-              className={styles.previewLink}
-            >
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={resource.image}
-                  alt={resource.title}
-                  fill
-                  className={styles.image}
-                  sizes="(max-width: 768px) 80vw, 400px"
-                />
-              </div>
-              <div className={styles.content}>
-                <h3 className={styles.cardTitle}>{resource.title}</h3>
-                {resource.subtitle && (
-                  <p className={styles.cardSubtitle}>{resource.subtitle}</p>
-                )}
-              </div>
-            </Link>
-            <Link
-              href={`/resources/${slugify(resource.title)}`}
-              className={styles.downloadLink}
-            >
-              View Resource
-              <Arrow />
-            </Link>
-          </div>
-        ))}
+        {resources.map((resource) => {
+          const slug = slugify(resource.title);
+          const previewHref = `/resources/${slug}`;
+          return (
+            <div key={resource.title} className={styles.card} data-slide="true">
+              <ResourceDownloadButton
+                resourceId={slug}
+                resourceType="resource"
+                title={resource.title}
+                fileUrl={previewHref}
+                kind="view"
+                className={styles.previewLink}
+              >
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src={resource.image}
+                    alt={resource.title}
+                    fill
+                    className={styles.image}
+                    sizes="(max-width: 768px) 80vw, 400px"
+                  />
+                </div>
+                <div className={styles.content}>
+                  <h3 className={styles.cardTitle}>{resource.title}</h3>
+                  {resource.subtitle && (
+                    <p className={styles.cardSubtitle}>{resource.subtitle}</p>
+                  )}
+                </div>
+              </ResourceDownloadButton>
+              <ResourceDownloadButton
+                resourceId={slug}
+                resourceType="resource"
+                title={resource.title}
+                fileUrl={previewHref}
+                kind="view"
+                className={styles.downloadLink}
+              >
+                View Resource
+                <Arrow />
+              </ResourceDownloadButton>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-import Link from "next/link";
 import styles from "./styles.module.css";
 import { teams } from "@/utils/data";
 import Coins from "@/svg/coins";
 import Arrow from "@/svg/arrow";
+import ResourceDownloadButton from "@/components/resourceDownload/ResourceDownloadButton";
 
 const TeamResearchSection: React.FC = () => {
   return (
@@ -20,16 +20,16 @@ const TeamResearchSection: React.FC = () => {
               </div>
               <h3 className={styles.cardTitle}>{team.name}</h3>
               <p className={styles.cardDescription}>{team.description}</p>
-              <Link
-                href={team.pdfUrl}
+              <ResourceDownloadButton
+                resourceId={team.id}
+                resourceType="team-research"
+                title={team.name}
+                fileUrl={team.pdfUrl}
                 className={styles.downloadLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                download={true}
               >
                 Download PDF
                 <Arrow />
-              </Link>
+              </ResourceDownloadButton>
             </div>
           ))}
         </div>

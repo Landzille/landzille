@@ -98,11 +98,15 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  border: none;
+  background: none;
+  padding: 0;
   font-size: 14px;
   font-family: "Instrument Sans", sans-serif;
   font-weight: 400;
   color: #2f6a4f;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 

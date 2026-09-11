@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./styles.module.css";
 import Arrow from "@/svg/arrow";
 import { allMagazines } from "@/utils/e-magazines";
 import { slugify } from "@/utils/readableResources";
+import ResourceDownloadButton from "@/components/resourceDownload/ResourceDownloadButton";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -41,37 +41,49 @@ const MagazinesSection: React.FC = () => {
         <h2 className={styles.title}>Magazines</h2>
 
         <div className={styles.grid}>
-          {currentResources.map((resource) => (
-            <div key={resource.id} className={styles.card}>
-              <Link
-                href={`/resources/${slugify(resource.title)}`}
-                className={styles.previewLink}
-              >
-                <div className={styles.imageWrapper}>
-                  <Image
-                    src={resource.image}
-                    alt={resource.title}
-                    fill
-                    className={styles.image}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <div className={styles.content}>
-                  <h3 className={styles.cardTitle}>{resource.title}</h3>
-                  {resource.subtitle && (
-                    <p className={styles.subtitle}>{resource.subtitle}</p>
-                  )}
-                </div>
-              </Link>
-              <Link
-                href={`/resources/${slugify(resource.title)}`}
-                className={styles.downloadLink}
-              >
-                View Magazine
-                <Arrow />
-              </Link>
-            </div>
-          ))}
+          {currentResources.map((resource) => {
+            const slug = slugify(resource.title);
+            const previewHref = `/resources/${slug}`;
+            return (
+              <div key={resource.id} className={styles.card}>
+                <ResourceDownloadButton
+                  resourceId={slug}
+                  resourceType="resource"
+                  title={resource.title}
+                  fileUrl={previewHref}
+                  kind="view"
+                  className={styles.previewLink}
+                >
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={resource.image}
+                      alt={resource.title}
+                      fill
+                      className={styles.image}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className={styles.content}>
+                    <h3 className={styles.cardTitle}>{resource.title}</h3>
+                    {resource.subtitle && (
+                      <p className={styles.subtitle}>{resource.subtitle}</p>
+                    )}
+                  </div>
+                </ResourceDownloadButton>
+                <ResourceDownloadButton
+                  resourceId={slug}
+                  resourceType="resource"
+                  title={resource.title}
+                  fileUrl={previewHref}
+                  kind="view"
+                  className={styles.downloadLink}
+                >
+                  View Magazine
+                  <Arrow />
+                </ResourceDownloadButton>
+              </div>
+            );
+          })}
         </div>
 
         {/* Pagination */}

@@ -37,14 +37,20 @@ export default function Hero() {
 
       <div className={styles.content}>
         <div className={styles.container}>
+          {slides[currentSlide].kicker && (
+            <p className={styles.kicker}>{slides[currentSlide].kicker}</p>
+          )}
           <h1 className={styles.heading}>{slides[currentSlide].heading}</h1>
+          {slides[currentSlide].subtext && (
+            <p className={styles.subtext}>{slides[currentSlide].subtext}</p>
+          )}
 
           <div className={styles.actions}>
             <Link href="#land-listings" className={styles.primaryButton}>
-              Browse Land Listings
+              {slides[currentSlide].primaryButtonText ?? "Browse Land Listings"}
             </Link>
             <Link href="/contact" className={styles.secondaryButton}>
-              Book a Consultation
+              {slides[currentSlide].secondaryButtonText ?? "Book a Consultation"}
             </Link>
           </div>
         </div>

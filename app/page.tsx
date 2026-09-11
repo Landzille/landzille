@@ -1,10 +1,11 @@
 // import DownloadMagazine from "@/components/downloadMagazine";
+import CommunitySection from "@/components/communitySection";
 import Features from "@/components/features";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/heroSlider";
 import Holdings from "@/components/holdings";
-import InsightsSection from "@/components/insights/insightSection";
+// import InsightsSection from "@/components/insights/insightSection";
 import OtherHeroSection from "@/components/otherHeros";
 import PartnersSection from "@/components/partnerSection/section";
 // import Popup from "@/components/popup";
@@ -21,16 +22,17 @@ const HomePage = () => {
         <DownloadMagazine />
       </Popup> */}
       <Hero />
-      <Features />
       <Stats />
-      <WhyTexas />
+      <Features />
       <Holdings />
+      <WhyTexas />
       <WhyInvest />
       {/* <Testimonials /> */}
       <Reviews />
       <PartnersSection />
       <OtherHeroSection />
-      <InsightsSection />
+      {/* <InsightsSection /> */}
+      <CommunitySection />
       <Footer />
     </div>
   );

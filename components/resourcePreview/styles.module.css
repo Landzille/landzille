@@ -154,6 +154,14 @@
 }
 
 .moreCard {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
   text-decoration: none;
   display: flex;
   flex-direction: column;

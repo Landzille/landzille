@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Sans, Lora } from "next/font/google";
 import Script from "next/script";
 import SessionProvider from "@/components/sessionProvider";
+import ResourceAccessProvider from "@/components/resourceDownload/ResourceAccessProvider";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -39,7 +40,9 @@ export default function RootLayout({
       <body
         className={`${instrumentSans.variable} ${lora.variable} antialiased`}
       >
-        <SessionProvider>{children}</SessionProvider>
+        <SessionProvider>
+          <ResourceAccessProvider>{children}</ResourceAccessProvider>
+        </SessionProvider>
 
         {/* Google Analytics */}
         <Script

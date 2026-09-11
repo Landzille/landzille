@@ -6,7 +6,7 @@ import Lock from "@/svg/lock";
 import Shake from "@/svg/shake";
 import Star from "@/svg/star";
 import Thumbs from "@/svg/thumbs";
-import { JSX } from "react";
+import { JSX, ReactNode } from "react";
 
 interface NavItem {
   label: string;
@@ -67,7 +67,11 @@ interface Slide {
   id: number;
   image: string;
   location: string;
-  heading: string;
+  kicker?: string;
+  heading: ReactNode;
+  subtext?: string;
+  primaryButtonText?: string;
+  secondaryButtonText?: string;
 }
 
 export const slides: Slide[] = [
@@ -75,21 +79,35 @@ export const slides: Slide[] = [
     id: 1,
     image: "/assets/gainsville.jpg",
     location: "Gainesville",
-    heading:
-      "Invest in Verified Land Opportunities Across North Texas. Transparent, Secure, High-Growth.",
+    kicker: "INVEST • BUILD • LEAVE A LEGACY",
+    heading: (
+      <>
+        Own Land
+        <br />
+        in <span style={{ color: "#7ef2b8" }}>North Texas</span>.
+      </>
+    ),
+    subtext: "Affordable land. Flexible financing. Real opportunities.",
+    primaryButtonText: "View Available Land",
   },
   {
     id: 2,
     image: "/assets/leonard.jpg",
     location: "Leonard\u00A0\u00A0\u00A0\u00A0",
-    heading: "Discover Prime Land Investments in Growing Texas Markets.",
+    heading: (
+      <>
+        Be part of 60+ families building generational wealth through land
+        ownership in <span style={{ color: "#7ef2b8" }}>North Texas</span>.
+      </>
+    ),
+    primaryButtonText: "Explore Available Land",
   },
-  {
-    id: 3,
-    image: "/assets/roxton.jpeg",
-    location: "Roxton\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
-    heading: "Build Your Future with Trusted Land Opportunities.",
-  },
+  // {
+  //   id: 3,
+  //   image: "/assets/roxton.jpeg",
+  //   location: "Roxton\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+  //   heading: "Build Your Future with Trusted Land Opportunities.",
+  // },
 ];
 
 interface Feature {

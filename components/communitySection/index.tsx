@@ -1,9 +1,7 @@
-import Script from "next/script";
+import Image from "next/image";
 import styles from "./styles.module.css";
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/IrWv8O1iGxJ1e0I0SMsKIN?mode=gi_t";
-const CALENDLY_URL =
-  "https://calendly.com/landzille/discovery-call?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2f6a50";
 
 const TrendIcon = () => (
   <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
@@ -92,20 +90,21 @@ const CommunitySection: React.FC = () => {
         </div>
 
         <div className={styles.visualColumn}>
-          <div className={styles.calendlyCard}>
-            <div
-              className="calendly-inline-widget"
-              data-url={CALENDLY_URL}
-              style={{ minWidth: "320px", height: "700px" }}
+          <div className={styles.photoCard}>
+            <Image
+              src="/assets/community.jpg"
+              alt="Landzille community members exploring North Texas land"
+              fill
+              sizes="(max-width: 1024px) 100vw, 480px"
+              className={styles.photo}
             />
+            <div className={styles.photoOverlay} />
+            <p className={styles.photoCaption}>
+              Real people. Real North Texas land opportunities.
+            </p>
           </div>
         </div>
       </div>
-
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-      />
     </section>
   );
 };

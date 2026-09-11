@@ -22,7 +22,7 @@ const OtherHeroSection: React.FC = () => {
           <Link href="/#land-listings" className={styles.primaryButton}>
             Explore North Texas Opportunities
           </Link>
-          <Link href="/contact" className={styles.secondaryButton}>
+          <Link href="/consultation" className={styles.secondaryButton}>
             Book a Consultation
           </Link>
         </div>

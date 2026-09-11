@@ -49,7 +49,7 @@ export default function Hero() {
             <Link href="#land-listings" className={styles.primaryButton}>
               {slides[currentSlide].primaryButtonText ?? "Browse Land Listings"}
             </Link>
-            <Link href="/contact" className={styles.secondaryButton}>
+            <Link href="/consultation" className={styles.secondaryButton}>
               {slides[currentSlide].secondaryButtonText ?? "Book a Consultation"}
             </Link>
           </div>

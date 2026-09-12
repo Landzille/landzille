@@ -92,16 +92,12 @@ const CommunitySection: React.FC = () => {
         <div className={styles.visualColumn}>
           <div className={styles.photoCard}>
             <Image
-              src="/assets/community.jpg"
-              alt="Landzille community members exploring North Texas land"
+              src="/assets/community-app.png"
+              alt="Landzille Community chat preview"
               fill
               sizes="(max-width: 1024px) 100vw, 480px"
               className={styles.photo}
             />
-            <div className={styles.photoOverlay} />
-            <p className={styles.photoCaption}>
-              Real people. Real North Texas land opportunities.
-            </p>
           </div>
         </div>
       </div>

@@ -94,12 +94,16 @@ export const slides: Slide[] = [
     id: 2,
     image: "/assets/leonard.jpg",
     location: "Leonard\u00A0\u00A0\u00A0\u00A0",
+    kicker: "INVEST \u2022 BUILD \u2022 LEAVE A LEGACY",
     heading: (
       <>
-        Be part of 60+ families building generational wealth through land
-        ownership in <span style={{ color: "#7ef2b8" }}>North Texas</span>.
+        <span style={{ color: "#7ef2b8" }}>Build Wealth</span>
+        <br />
+        That Outlives You.
       </>
     ),
+    subtext:
+      "Be part of 60+ families building generational wealth through land ownership in North Texas.",
     primaryButtonText: "Explore Available Land",
   },
   // {

@@ -66,7 +66,7 @@
 }
 
 .directContactTitle {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: #1a1d1f;
   margin: 0 0 6px 0;
@@ -74,7 +74,7 @@
 
 .directContactLink {
   font-family: "Instrument Sans", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: #2f6a50;
   text-decoration: none;
@@ -85,7 +85,7 @@
 }
 
 .reassuranceTitle {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: #1a1d1f;
   margin: 0 0 18px 0;
@@ -105,7 +105,7 @@
   align-items: center;
   gap: 10px;
   font-family: "Instrument Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #3a3f42;
 }

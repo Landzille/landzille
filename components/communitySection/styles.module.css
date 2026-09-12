@@ -97,7 +97,6 @@
 .photoCard {
   position: relative;
   width: 100%;
-  max-width: 380px;
   aspect-ratio: 1792 / 2400;
 }
 

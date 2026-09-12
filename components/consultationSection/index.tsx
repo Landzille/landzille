@@ -43,6 +43,14 @@ const ConsultationSection: React.FC = () => {
       </div>
 
       <div className={styles.container}>
+        <div className={styles.calendlyCard}>
+          <div
+            className="calendly-inline-widget"
+            data-url={CALENDLY_URL}
+            style={{ minWidth: "320px", height: "700px" }}
+          />
+        </div>
+
         <div className={styles.leftColumn}>
           <div className={styles.reassurance}>
             <h3 className={styles.reassuranceTitle}>What we&apos;ll discuss</h3>
@@ -81,14 +89,6 @@ const ConsultationSection: React.FC = () => {
               info@landzille.com
             </TrackedContactLink>
           </div>
-        </div>
-
-        <div className={styles.calendlyCard}>
-          <div
-            className="calendly-inline-widget"
-            data-url={CALENDLY_URL}
-            style={{ minWidth: "320px", height: "700px" }}
-          />
         </div>
       </div>
 

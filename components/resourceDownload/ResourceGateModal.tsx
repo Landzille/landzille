@@ -169,7 +169,7 @@ export default function ResourceGateModal({
         </h2>
         <p className={styles.gateSub}>
           Enter your details once to {pending.kind === "view" ? "view" : "download"}{" "}
-          this resource. This browser will remember you for 45 days.
+          this resource.
         </p>
 
         <form onSubmit={handleSubmit} className={styles.gateForm} noValidate>

@@ -536,6 +536,12 @@ export const partnersData: Partner[] = [
     logo: "/assets/optimum.png",
     url: "https://opti.com",
   },
+  {
+    id: "texas-farm-credit",
+    name: "Texas Farm Credit",
+    logo: "/assets/texas-farm-credit.png",
+    url: "https://texasfarmcredit.com",
+  },
 ];
 
 export interface Insight {

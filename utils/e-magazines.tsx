@@ -7,7 +7,14 @@ interface Magazines {
 }
 
 export const allMagazines: Magazines[] = [
-    {
+  {
+    id: "19",
+    title: "I am Land - Vol 19",
+    subtitle: "92 Days",
+    image: "/assets/resources/i-am-land-19.jpeg",
+    downloadUrl: "/downloads/magazines/LANDZILLE_ E-Magazine 19.0.pdf",
+  },
+  {
     id: "18",
     title: "I am Land - Vol 18",
     subtitle: "The Closing",

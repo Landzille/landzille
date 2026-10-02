@@ -3,22 +3,22 @@ import styles from "./styles.module.css";
 import { slugify } from "@/utils/readableResources";
 import ResourceDownloadButton from "@/components/resourceDownload/ResourceDownloadButton";
 
-const MAGAZINE_TITLE = "I am Land - Vol 17";
-const MAGAZINE_URL = "/downloads/magazines/LANDZILLE_ E-Magazine-18.0.pdf";
+const MAGAZINE_TITLE = "I am Land - Vol 19";
+const MAGAZINE_URL = "/downloads/magazines/LANDZILLE_ E-Magazine 19.0.pdf";
 
 const DownloadMagazine: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.colOne}>
         <Image
-          src="/assets/magazines/I-am-land-18.jpeg"
+          src="/assets/resources/i-am-land-19.jpeg"
           width={646}
           height={762}
           alt="download"
         />
       </div>
       <div className={styles.colTwo}>
-        <h2>Download Landzille&apos;s e - Magazine (September Edition)</h2>
+        <h2>Download Landzille&apos;s e - Magazine (October Edition)</h2>
         <ResourceDownloadButton
           resourceId={slugify(MAGAZINE_TITLE)}
           resourceType="magazine"

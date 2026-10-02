@@ -302,4 +302,13 @@ export const allResources: Resource[] = [
     resourceType: "Guide",
     investorStage: "New Investor",
   },
+  {
+    id: "18",
+    title: "20 REASONS TO OWN LAND IN DODD CITY, TEXAS",
+    subtitle:
+      "The Investor's Guide to Fannin County's Next Lake-and-Highway Growth Corridor",
+    image: "/assets/resources/dodd-city-texas.jpeg",
+    downloadUrl: "/downloads/resources/dodd-city-texas.pdf",
+    resourceType: "Guide",
+  },
 ];

@@ -56,6 +56,7 @@ export const resourceStages: Stage[] = [
     title: "Explore North Texas",
     description: "Go deeper into specific markets.",
     resources: [
+      findResource("20 REASONS TO OWN LAND IN DODD CITY, TEXAS"),
       findResource("ROXTON TEXAS"),
       findResource("LEONARD TEXAS"),
       findResource("I AM MUENSTER"),

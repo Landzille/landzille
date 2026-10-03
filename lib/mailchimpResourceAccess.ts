@@ -16,11 +16,6 @@ const CUSTOM_MERGE_FIELDS = [
   { tag: "LASTRES", name: "Last Resource" },
 ] as const;
 
-/**
- * Mirrors the self-provisioning approach used on the Skillweed site: check
- * what merge fields exist on the audience and create whatever's missing, so
- * this never depends on someone configuring the audience by hand.
- */
 async function ensureMergeFields(
   baseUrl: string,
   listId: string,
@@ -85,35 +80,58 @@ export async function addOrUpdateResourceContact(input: AddResourceContactInput)
   if (confirmedFields.has("RESTYPE")) mergeFields.RESTYPE = input.resourceType;
   if (confirmedFields.has("LASTRES")) mergeFields.LASTRES = input.resourceId;
 
-  const memberRes = await fetch(
-    `${baseUrl}/lists/${AUDIENCE_ID}/members/${subscriberHash}`,
-    {
-      method: "PUT",
-      headers,
-      body: JSON.stringify({
-        email_address: input.email,
-        status_if_new: "subscribed",
-        merge_fields: mergeFields,
-      }),
+  try {
+    const memberRes = await fetch(
+      `${baseUrl}/lists/${AUDIENCE_ID}/members/${subscriberHash}`,
+      {
+        method: "PUT",
+        headers,
+        body: JSON.stringify({
+          email_address: input.email,
+          status_if_new: "subscribed",
+          merge_fields: mergeFields,
+        }),
+      }
+    );
+
+    if (!memberRes.ok) {
+      const data = await memberRes.json().catch(() => ({}) as Record<string, unknown>);
+      console.error("Mailchimp contact PUT failed", memberRes.status, data);
+
+      if (data?.title === "Member Exists") {
+        const patchRes = await fetch(
+          `${baseUrl}/lists/${AUDIENCE_ID}/members/${subscriberHash}`,
+          {
+            method: "PATCH",
+            headers,
+            body: JSON.stringify({ merge_fields: mergeFields }),
+          }
+        );
+        if (!patchRes.ok) {
+          console.error(
+            "Mailchimp contact PATCH fallback failed",
+            patchRes.status,
+            await patchRes.json().catch(() => ({}))
+          );
+        }
+      } else if (data?.title === "Forgotten Email Not Subscribed") {
+        console.warn("Mailchimp: email previously forgotten, skipping contact write", input.email);
+      }
     }
-  );
 
-  if (!memberRes.ok) {
-    const details = await memberRes.text();
-    console.error("Mailchimp contact request failed", memberRes.status, details);
-    throw new Error("Unable to save contact");
-  }
+    const tagRes = await fetch(
+      `${baseUrl}/lists/${AUDIENCE_ID}/members/${subscriberHash}/tags`,
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify({ tags: [{ name: RESOURCE_TAG, status: "active" }] }),
+      }
+    );
 
-  const tagRes = await fetch(
-    `${baseUrl}/lists/${AUDIENCE_ID}/members/${subscriberHash}/tags`,
-    {
-      method: "POST",
-      headers,
-      body: JSON.stringify({ tags: [{ name: RESOURCE_TAG, status: "active" }] }),
+    if (!tagRes.ok) {
+      console.error("Mailchimp tag failed:", await tagRes.json().catch(() => ({})));
     }
-  );
-
-  if (!tagRes.ok) {
-    console.error("Mailchimp tag failed:", await tagRes.json());
+  } catch (err) {
+    console.error("Mailchimp contact request threw", err);
   }
 }

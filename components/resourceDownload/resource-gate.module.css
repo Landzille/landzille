@@ -75,6 +75,12 @@
   background-color: #eaf1ed;
   border-radius: 12px;
   color: #2d5a4d;
+  animation: scaleIn 0.25s ease;
+}
+
+.gateIconWrap[data-success] {
+  background-color: #e3f6e8;
+  color: #1f9d4f;
 }
 
 .gateTitle {

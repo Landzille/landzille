@@ -19,6 +19,18 @@ const UnlockIcon = () => (
   </svg>
 );
 
+const CheckIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+    <path
+      d="M5 13l4.5 4.5L19 7"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const CloseIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
     <path
@@ -59,6 +71,7 @@ export default function ResourceGateModal({
   const [formLoadedAt] = useState<string>(() => Date.now().toString());
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -68,8 +81,13 @@ export default function ResourceGateModal({
     });
   }, [pending.resourceId, pending.resourceType]);
 
+  const guardedClose = () => {
+    if (!success) onClose();
+  };
+
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
+      if (success) return;
       if (e.key === "Escape") {
         onClose();
         return;
@@ -96,7 +114,7 @@ export default function ResourceGateModal({
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  }, [onClose, success]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -131,7 +149,9 @@ export default function ResourceGateModal({
         resource_id: pending.resourceId,
         resource_type: pending.resourceType,
       });
-      onUnlocked();
+      setSuccess(true);
+      window.setTimeout(() => onUnlocked(), 900);
+      return;
     } catch {
       setError("Network error. Please check your connection and try again.");
     } finally {
@@ -142,7 +162,7 @@ export default function ResourceGateModal({
   return (
     <div
       className={styles.modalOverlay}
-      onClick={onClose}
+      onClick={guardedClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="resource-gate-heading"
@@ -155,23 +175,28 @@ export default function ResourceGateModal({
         <button
           type="button"
           className={styles.modalClose}
-          onClick={onClose}
+          onClick={guardedClose}
           aria-label="Close"
         >
           <CloseIcon />
         </button>
 
-        <div className={styles.gateIconWrap}>
-          <UnlockIcon />
+        <div
+          className={styles.gateIconWrap}
+          data-success={success || undefined}
+        >
+          {success ? <CheckIcon /> : <UnlockIcon />}
         </div>
         <h2 id="resource-gate-heading" className={styles.gateTitle}>
-          Unlock &ldquo;{pending.title}&rdquo;
+          {success ? "You're all set!" : `Unlock “${pending.title}”`}
         </h2>
         <p className={styles.gateSub}>
-          Enter your details once to {pending.kind === "view" ? "view" : "download"}{" "}
-          this resource.
+          {success
+            ? `Your ${pending.kind === "view" ? "resource is opening" : "download is starting"} now…`
+            : `Enter your details once to ${pending.kind === "view" ? "view" : "download"} this resource.`}
         </p>
 
+        {!success && (
         <form onSubmit={handleSubmit} className={styles.gateForm} noValidate>
           <div
             style={{
@@ -233,6 +258,7 @@ export default function ResourceGateModal({
             {!loading && <ArrowIcon />}
           </button>
         </form>
+        )}
       </div>
     </div>
   );

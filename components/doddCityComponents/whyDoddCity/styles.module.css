@@ -1,5 +1,5 @@
 .section {
-  background-color: #fbfaf9;
+  background-color: #07181a;
   padding: 110px 0;
 }
 
@@ -13,7 +13,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #2f6a50;
+  color: #e8b04a;
   margin: 0 0 56px 0;
   text-align: center;
 }
@@ -30,7 +30,7 @@
   grid-template-columns: 90px 1fr;
   gap: 32px;
   padding: 40px 0;
-  border-bottom: 1px solid #e4e1db;
+  border-bottom: 1px solid rgba(232, 176, 74, 0.18);
 }
 
 .reason:last-child {
@@ -41,14 +41,14 @@
   font-family: "lora", serif;
   font-style: italic;
   font-size: 48px;
-  color: #c9ddcf;
+  color: #e8b04a;
   line-height: 1;
 }
 
 .title {
   font-size: 22px;
   font-weight: 700;
-  color: #1a1d1f;
+  color: #ffffff;
   margin: 0 0 14px 0;
   line-height: 1.35;
 }
@@ -57,7 +57,7 @@
   font-family: "Instrument Sans", sans-serif;
   font-size: 15px;
   line-height: 1.7;
-  color: #6d7378;
+  color: #b9cdca;
   margin: 0;
 }
 

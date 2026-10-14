@@ -1,6 +1,6 @@
 .stats {
-  background: #2f6a50;
-  border: 1px solid #2f6a50;
+  background: #07181a;
+  border: 1px solid #07181a;
 }
 
 .container {
@@ -16,13 +16,13 @@
 
 .statCard {
   text-align: center;
-  border-left: 1px solid rgba(255, 255, 255, 0.18);
-  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 1px solid rgba(232, 176, 74, 0.18);
+  border-right: 1px solid rgba(232, 176, 74, 0.18);
   padding: 40px;
 }
 
 .value {
-  color: #ffffff;
+  color: #e8b04a;
   font-size: 48px;
   font-weight: 700;
   line-height: 1;
@@ -39,7 +39,7 @@
 }
 
 .subtitle {
-  color: #c7dcd0;
+  color: #cfe0dd;
   font-family: "Instrument Sans", sans-serif;
   font-size: 12px;
 }

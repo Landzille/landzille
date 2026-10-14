@@ -21,15 +21,15 @@
   background:
     linear-gradient(
       90deg,
-      rgba(6, 14, 10, 0.78) 0%,
-      rgba(6, 14, 10, 0.45) 45%,
-      rgba(6, 14, 10, 0.15) 75%
+      rgba(5, 20, 26, 0.8) 0%,
+      rgba(5, 20, 26, 0.45) 45%,
+      rgba(5, 20, 26, 0.15) 75%
     ),
     linear-gradient(
       180deg,
-      rgba(6, 14, 10, 0.35) 0%,
-      rgba(6, 14, 10, 0.1) 30%,
-      rgba(6, 14, 10, 0.55) 100%
+      rgba(5, 20, 26, 0.35) 0%,
+      rgba(5, 20, 26, 0.1) 30%,
+      rgba(10, 63, 62, 0.55) 100%
     );
 }
 
@@ -37,7 +37,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 220px 0 150px 0;
+  padding: 110px 0 150px 0;
 }
 
 .container {
@@ -68,7 +68,7 @@
 }
 
 .highlight {
-  color: #7ef2b8;
+  color: #e8b04a;
 }
 
 .subtext {
@@ -92,19 +92,19 @@
   align-items: center;
   gap: 10px;
   padding: 16px 32px;
-  background: #ffffff;
-  color: #1a4d38;
+  background: linear-gradient(135deg, #e8b04a, #c8702a);
+  color: #1a0f02;
   text-decoration: none;
   font-family: "Instrument Sans", sans-serif;
   font-weight: 600;
   border-radius: 4px;
   transition: all 0.3s ease;
-  border: 0.5px solid #ffffff;
+  border: 0.5px solid transparent;
 }
 
 .primaryButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 24px rgba(200, 112, 42, 0.45);
 }
 
 .secondaryButton {
@@ -122,7 +122,7 @@
 
 .secondaryButton:hover {
   background: white;
-  color: #1a4d38;
+  color: #1a0f02;
 }
 
 .locationDisplay {
@@ -162,7 +162,7 @@
   }
 
   .content {
-    padding: 160px 0 110px 0;
+    padding: 70px 0 110px 0;
   }
 
   .container {

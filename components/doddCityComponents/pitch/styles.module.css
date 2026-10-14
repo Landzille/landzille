@@ -1,5 +1,5 @@
 .section {
-  background-color: #fbfaf9;
+  background-color: #f7f3ea;
   padding: 90px 0;
 }
 
@@ -15,7 +15,7 @@
   font-style: italic;
   font-size: 26px;
   line-height: 1.5;
-  color: #1a1d1f;
+  color: #10201f;
   margin: 0 0 24px 0;
 }
 
@@ -23,7 +23,7 @@
   font-family: "Instrument Sans", sans-serif;
   font-size: 17px;
   line-height: 1.75;
-  color: #4a4f52;
+  color: #51605e;
   margin: 0;
 }
 

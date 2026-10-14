@@ -1,5 +1,5 @@
 .section {
-  background-color: #fbfaf9;
+  background-image: linear-gradient(180deg, #0a3f3e, #05141a);
   padding: 120px 0;
   text-align: center;
 }
@@ -13,13 +13,13 @@
 .heading {
   font-size: 40px;
   font-weight: 700;
-  color: #1a1d1f;
+  color: #ffffff;
   line-height: 1.25;
   margin: 0 0 64px 0;
 }
 
 .highlight {
-  color: #2f6a50;
+  color: #e8b04a;
 }
 
 .steps {
@@ -41,8 +41,8 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #2f6a50;
-  color: #ffffff;
+  background-image: linear-gradient(135deg, #e8b04a, #c8702a);
+  color: #1a0f02;
   font-family: "Instrument Sans", sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -52,7 +52,7 @@
 .stepTitle {
   font-size: 16px;
   font-weight: 700;
-  color: #1a1d1f;
+  color: #ffffff;
   margin: 0 0 8px 0;
 }
 
@@ -60,7 +60,7 @@
   font-family: "Instrument Sans", sans-serif;
   font-size: 14px;
   line-height: 1.55;
-  color: #6d7378;
+  color: #b9cdca;
   margin: 0;
 }
 
@@ -72,28 +72,27 @@
   font-family: "Instrument Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #2f6a50;
+  color: #1a0f02;
+  background-image: linear-gradient(135deg, #e8b04a, #c8702a);
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.25s ease;
 }
 
 .cta:hover {
-  background-color: #234839;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(47, 106, 80, 0.3);
+  box-shadow: 0 10px 24px rgba(200, 112, 42, 0.45);
 }
 
 .contact {
   margin-top: 28px;
   font-family: "Instrument Sans", sans-serif;
   font-size: 14px;
-  color: #6d7378;
+  color: #cfe0dd;
 }
 
 .contactLink {
-  color: #2f6a50;
+  color: #e8b04a;
   text-decoration: none;
   font-weight: 600;
 }
@@ -104,7 +103,7 @@
 
 .divider {
   margin: 0 10px;
-  color: #c9c5bf;
+  color: #2c4745;
 }
 
 @media (max-width: 768px) {

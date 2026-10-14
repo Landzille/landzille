@@ -1,0 +1,42 @@
+.section {
+  background-color: #fbfaf9;
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.question {
+  font-family: "lora", serif;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.5;
+  color: #1a1d1f;
+  margin: 0 0 24px 0;
+}
+
+.body {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #4a4f52;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .body {
+    font-size: 15px;
+  }
+}

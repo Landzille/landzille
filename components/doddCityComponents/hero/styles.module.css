@@ -1,0 +1,205 @@
+.hero {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  background-image: url("../../../public/assets/dodd-city-hero.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 14, 10, 0.78) 0%,
+      rgba(6, 14, 10, 0.45) 45%,
+      rgba(6, 14, 10, 0.15) 75%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 14, 10, 0.35) 0%,
+      rgba(6, 14, 10, 0.1) 30%,
+      rgba(6, 14, 10, 0.55) 100%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 220px 0 150px 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.kicker {
+  color: #ffffff;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  opacity: 0.92;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.12;
+  max-width: 900px;
+  margin: 0 0 28px 0;
+  letter-spacing: -0.5%;
+}
+
+.highlight {
+  color: #7ef2b8;
+}
+
+.subtext {
+  color: #f0f0f0;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  max-width: 620px;
+  margin: 0 0 40px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: #ffffff;
+  color: #1a4d38;
+  text-decoration: none;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 0.5px solid #ffffff;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.secondaryButton {
+  padding: 16px 32px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 0.5px solid #ffffff;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: #1a4d38;
+}
+
+.locationDisplay {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.currentLocation {
+  color: white;
+  font-size: 32px;
+  font-family: "lora", sans-serif;
+  font-style: italic;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.currentLocationLine {
+  width: 100px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 640px;
+  }
+
+  .content {
+    padding: 160px 0 110px 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .locationDisplay {
+    bottom: 1.75rem;
+    right: 1.5rem;
+  }
+
+  .currentLocation {
+    font-size: 22px;
+  }
+
+  .currentLocationLine {
+    width: 70px;
+  }
+}

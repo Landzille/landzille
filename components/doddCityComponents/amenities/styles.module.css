@@ -1,0 +1,82 @@
+.section {
+  background-color: #ffffff;
+  padding: 110px 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2f6a50;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 56px 0;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 32px;
+  border-radius: 16px;
+  background-color: #fbfaf9;
+  border: 1px solid #ece9e4;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #e9efe9;
+  color: #2f6a50;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 10px 0;
+}
+
+.description {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #6d7378;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+}

@@ -1,0 +1,102 @@
+.section {
+  background-color: #ffffff;
+  padding: 110px 0;
+  scroll-margin-top: 90px;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2f6a50;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 56px 0;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fbfaf9;
+  border: 1px solid #ece9e4;
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.minutesRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.minutesBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #e9efe9;
+  color: #2f6a50;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pinIcon {
+  color: #2f6a50;
+  opacity: 0.6;
+  display: flex;
+}
+
+.place {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 8px 0;
+}
+
+.description {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #6d7378;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+}

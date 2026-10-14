@@ -1,0 +1,129 @@
+.section {
+  background-color: #fbfaf9;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1d1f;
+  line-height: 1.25;
+  margin: 0 0 64px 0;
+}
+
+.highlight {
+  color: #2f6a50;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 56px;
+  text-align: left;
+}
+
+.step {
+  position: relative;
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #2f6a50;
+  color: #ffffff;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.stepTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1d1f;
+  margin: 0 0 8px 0;
+}
+
+.stepDescription {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #6d7378;
+  margin: 0;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 44px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2f6a50;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cta:hover {
+  background-color: #234839;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(47, 106, 80, 0.3);
+}
+
+.contact {
+  margin-top: 28px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  color: #6d7378;
+}
+
+.contactLink {
+  color: #2f6a50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  margin: 0 10px;
+  color: #c9c5bf;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-bottom: 44px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+
+  .cta {
+    width: 100%;
+  }
+}

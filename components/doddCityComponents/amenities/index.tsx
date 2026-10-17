@@ -117,7 +117,7 @@ const DoddCityAmenities = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <p className={styles.label}>AMENITIES &amp; PUBLIC SERVICES</p>
-        <h2 className={styles.heading}>Everything a growing town needs</h2>
+        <h2 className={styles.heading}>Everything a town needs</h2>
 
         <div className={styles.grid}>
           {amenities.map((item) => (

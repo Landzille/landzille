@@ -1,4 +1,4 @@
-import DoddCityTextHeader from "@/components/doddCityComponents/textHeader";
+// import DoddCityTextHeader from "@/components/doddCityComponents/textHeader";
 import DoddCityHero from "@/components/doddCityComponents/hero";
 import DoddCityStats from "@/components/doddCityComponents/stats";
 import DoddCityPitch from "@/components/doddCityComponents/pitch";
@@ -17,7 +17,7 @@ export const metadata = {
 const DoddCityPage = () => {
   return (
     <div>
-      <DoddCityTextHeader />
+      {/* <DoddCityTextHeader /> */}
       <DoddCityHero />
       <DoddCityStats />
       <DoddCityPitch />

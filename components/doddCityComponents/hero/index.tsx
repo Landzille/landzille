@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 const ArrowIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -18,7 +19,21 @@ const DoddCityHero = () => {
     <section className={styles.hero}>
       <div className={styles.backgroundImage} />
       <div className={styles.overlay} />
-
+      <div className={styles.header}>
+        <div className={styles.headerContainer}>
+          <Link href="/" className={styles.brand}>
+            <Image
+              src="/assets/logo.png"
+              alt="Landzille"
+              width={150}
+              height={50}
+            />
+          </Link>
+          <span className={styles.tag}>
+            Limited &middot; Strategic Offering
+          </span>
+        </div>
+      </div>
       <div className={styles.content}>
         <div className={styles.container}>
           <p className={styles.kicker}>LIMITED STRATEGIC LAND OFFERING</p>
@@ -30,8 +45,8 @@ const DoddCityHero = () => {
           <p className={styles.subtext}>
             A $1.6B lake at its edge. A $40B chip campus 30 minutes out.
             DFW&rsquo;s growth wave rolling in. This is a limited, strategic
-            land offering right in the crosshairs &mdash; front-row
-            positioning for early buyers, before the boom.
+            land offering right in the crosshairs &mdash; front-row positioning
+            for early buyers, before the boom.
           </p>
 
           <div className={styles.actions}>

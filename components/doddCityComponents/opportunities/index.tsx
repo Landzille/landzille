@@ -26,7 +26,15 @@ const HomeIcon = () => (
 
 const ChipIcon = () => (
   <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
-    <rect x="5" y="5" width="10" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+    <rect
+      x="5"
+      y="5"
+      width="10"
+      height="10"
+      rx="1.5"
+      stroke="currentColor"
+      strokeWidth="1.6"
+    />
     <path
       d="M8 2v3M12 2v3M8 15v3M12 15v3M2 8h3M2 12h3M15 8h3M15 12h3"
       stroke="currentColor"
@@ -98,18 +106,27 @@ const DoddCityOpportunities = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.label}>INVESTMENT OPPORTUNITIES</p>
-        <h2 className={styles.heading}>Five ways to make this land work for you</h2>
-
-        <div className={styles.grid}>
-          {opportunities.map((item) => (
-            <div key={item.title} className={styles.card}>
-              <span className={styles.icon}>{item.icon}</span>
-              <h3 className={styles.title}>{item.title}</h3>
-              <p className={styles.description}>{item.description}</p>
-            </div>
-          ))}
+        <div className={styles.intro}>
+          <p className={styles.label}>INVESTMENT OPPORTUNITIES</p>
+          <h2 className={styles.heading}>
+            Five ways to make this land work for you
+          </h2>
         </div>
+
+        <ol className={styles.list}>
+          {opportunities.map((item, i) => (
+            <li key={item.title} className={styles.item}>
+              <span className={styles.number}>
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className={styles.icon}>{item.icon}</span>
+              <div className={styles.body}>
+                <h3 className={styles.title}>{item.title}</h3>
+                <p className={styles.description}>{item.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

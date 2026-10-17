@@ -2,7 +2,7 @@
   position: relative;
   min-height: 760px;
   overflow: hidden;
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 
@@ -92,8 +92,8 @@
   align-items: center;
   gap: 10px;
   padding: 16px 32px;
-  background: linear-gradient(135deg, #e8b04a, #c8702a);
-  color: #1a0f02;
+  background: #2f6a50;
+  color: #ffffff;
   text-decoration: none;
   font-family: "Instrument Sans", sans-serif;
   font-weight: 600;
@@ -201,5 +201,54 @@
 
   .currentLocationLine {
     width: 70px;
+  }
+}
+
+/* Header */
+
+.header {
+  position: relative;
+  z-index: 2;
+  padding: 22px 0;
+}
+
+.headerContainer {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: "lora", serif;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.tag {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #cfe0dd;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 7px 14px;
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 6px 12px;
   }
 }

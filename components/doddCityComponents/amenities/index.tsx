@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import styles from "./styles.module.css";
 
 const SchoolIcon = () => (
@@ -113,19 +115,58 @@ const amenities = [
 ];
 
 const DoddCityAmenities = () => {
+  const [active, setActive] = useState(0);
+  const current = amenities[active];
+  const progress = (active / (amenities.length - 1)) * 100;
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <p className={styles.label}>AMENITIES &amp; PUBLIC SERVICES</p>
         <h2 className={styles.heading}>Everything a town needs</h2>
 
-        <div className={styles.grid}>
-          {amenities.map((item) => (
-            <div key={item.title} className={styles.card}>
-              <span className={styles.icon}>{item.icon}</span>
-              <h3 className={styles.title}>{item.title}</h3>
-              <p className={styles.description}>{item.description}</p>
-            </div>
+        {/* Feature stage */}
+        <div key={active} className={styles.stage}>
+          <div className={styles.copy}>
+            <span className={styles.counter}>
+              {String(active + 1).padStart(2, "0")}
+              <span className={styles.total}>
+                {" "}
+                / {String(amenities.length).padStart(2, "0")}
+              </span>
+            </span>
+            <h3 className={styles.title}>{current.title}</h3>
+            <p className={styles.description}>{current.description}</p>
+          </div>
+
+          <div className={styles.emblem} aria-hidden="true">
+            <span className={styles.ring} />
+            <span className={styles.bigIcon}>{current.icon}</span>
+          </div>
+        </div>
+
+        {/* Route */}
+        <div className={styles.route} role="tablist">
+          <div className={styles.track}>
+            <div
+              className={styles.trackFill}
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+
+          {amenities.map((item, i) => (
+            <button
+              key={item.title}
+              role="tab"
+              aria-selected={i === active}
+              className={`${styles.stop} ${i === active ? styles.stopActive : ""} ${
+                i < active ? styles.stopPassed : ""
+              }`}
+              onClick={() => setActive(i)}
+            >
+              <span className={styles.stopDot}>{item.icon}</span>
+              <span className={styles.stopLabel}>{item.title}</span>
+            </button>
           ))}
         </div>
       </div>

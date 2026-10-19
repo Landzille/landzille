@@ -29,14 +29,14 @@ const DoddCityHero = () => {
               height={50}
             />
           </Link>
-          <span className={styles.tag}>
-            Limited &middot; Strategic Offering
-          </span>
+          <Link href="/consultation" className={styles.primaryButton}>
+            Reserve Your Position
+            <ArrowIcon />
+          </Link>
         </div>
       </div>
       <div className={styles.content}>
         <div className={styles.container}>
-          <p className={styles.kicker}>LIMITED STRATEGIC LAND OFFERING</p>
           <h1 className={styles.heading}>
             <span className={styles.highlight}>Dodd City, Texas</span>
             <br />
@@ -50,10 +50,6 @@ const DoddCityHero = () => {
           </p>
 
           <div className={styles.actions}>
-            <Link href="/consultation" className={styles.primaryButton}>
-              Reserve Your Position
-              <ArrowIcon />
-            </Link>
             <a href="#why-invest" className={styles.secondaryButton}>
               See Why Invest
             </a>

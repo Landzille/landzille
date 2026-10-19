@@ -1,5 +1,5 @@
 .section {
-  background-image: linear-gradient(180deg, #2f6a50, #153e2d);
+  background-image: linear-gradient(180deg, #2f6a50, #357559);
   padding: 120px 0;
   text-align: center;
 }
@@ -19,7 +19,7 @@
 }
 
 .highlight {
-  color: #e8b04a;
+  color: #daffc1;
 }
 
 .steps {
@@ -41,7 +41,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-image: linear-gradient(135deg, #e8b04a, #c8702a);
+  background-image: linear-gradient(135deg, #daffc1, #ffffff);
   color: #1a0f02;
   font-family: "Instrument Sans", sans-serif;
   font-weight: 700;
@@ -73,7 +73,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #1a0f02;
-  background-image: linear-gradient(135deg, #e8b04a, #c8702a);
+  background-image: linear-gradient(135deg, #daffc1, #daffc1);
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -92,7 +92,7 @@
 }
 
 .contactLink {
-  color: #e8b04a;
+  color: #daffc1;
   text-decoration: none;
   font-weight: 600;
 }

@@ -9,11 +9,11 @@
 }
 
 .label {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #e8b04a;
+  color: #daffc1;
   margin: 0 0 56px 0;
   text-align: center;
 }
@@ -41,7 +41,7 @@
   font-family: "lora", serif;
   font-style: italic;
   font-size: 48px;
-  color: #e8b04a;
+  color: #daffc1;
   line-height: 1;
 }
 

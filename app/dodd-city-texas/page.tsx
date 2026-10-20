@@ -4,6 +4,7 @@ import DoddCityStats from "@/components/doddCityComponents/stats";
 import DoddCityPitch from "@/components/doddCityComponents/pitch";
 import DoddCityWhyInvest from "@/components/doddCityComponents/whyInvest";
 import DoddCityWhyDoddCity from "@/components/doddCityComponents/whyDoddCity";
+import DoddCityGallery from "@/components/doddCityComponents/gallery";
 import DoddCityAmenities from "@/components/doddCityComponents/amenities";
 import DoddCityOpportunities from "@/components/doddCityComponents/opportunities";
 import DoddCityCta from "@/components/doddCityComponents/cta";
@@ -23,6 +24,7 @@ const DoddCityPage = () => {
       <DoddCityPitch />
       <DoddCityWhyInvest />
       <DoddCityWhyDoddCity />
+      <DoddCityGallery />
       <DoddCityAmenities />
       <DoddCityOpportunities />
       <DoddCityCta />

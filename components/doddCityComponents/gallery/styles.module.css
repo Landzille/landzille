@@ -1,0 +1,300 @@
+.section {
+  background-color: #fffefc;
+  padding: 110px 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #c8702a;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #10201f;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.lead {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #51605e;
+  max-width: 560px;
+  margin: 0 auto 56px auto;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 220px 220px 220px;
+  grid-template-areas:
+    "a a b b"
+    "a a c d"
+    "e f g g";
+  gap: 14px;
+}
+
+.tile {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 18px;
+  overflow: hidden;
+  background: none;
+  font: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tile:hover .image {
+  transform: scale(1.06);
+}
+
+.tileOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 20, 26, 0.75) 0%,
+    rgba(5, 20, 26, 0) 55%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tile:hover .tileOverlay {
+  opacity: 1;
+}
+
+.tileCaption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+  color: #ffffff;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+}
+
+.tile:hover .tileCaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.expandBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(5, 20, 26, 0.55);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+.tile:hover .expandBadge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(5, 20, 26, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightboxImageWrap {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.lightboxImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.lightboxCaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #cfe0dd;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14px;
+  margin: 16px 4px 0 4px;
+}
+
+.lightboxCount {
+  color: #e8b04a;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lightboxNav {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.lightboxNav:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lightboxPrev {
+  margin-right: 20px;
+}
+
+.lightboxNext {
+  margin-left: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-rows: 180px 180px 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .lead {
+    margin-bottom: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 160px);
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e"
+      "f g"
+      "g g";
+  }
+
+  .lightboxNav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .lightboxPrev {
+    margin-right: 10px;
+  }
+
+  .lightboxNext {
+    margin-left: 10px;
+  }
+
+  .lightboxClose {
+    top: 14px;
+    right: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 220px);
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g";
+  }
+}

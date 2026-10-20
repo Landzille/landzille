@@ -233,6 +233,19 @@ interface Property {
 
 export const properties: Property[] = [
   {
+    id: 7,
+    link: "/dodd-city-texas",
+    image: "/assets/dodd-city-gallery/gallery-6.jpeg",
+    county: "FANNIN COUNTY",
+    title: "Dodd City Texas",
+    description:
+      "Lakeside acreage beside Bois d'Arc Lake. Ideal for a recreational getaway or weekend retreat.",
+    location: "LAKESIDE",
+    acres: "12-17 ACRES",
+    tags: ["RECREATIONAL"],
+    actions: ["Inquire for Price"],
+  },
+  {
     id: 1,
     link: "/gainesville",
     image: "/assets/gainsvilleImg.jpg",

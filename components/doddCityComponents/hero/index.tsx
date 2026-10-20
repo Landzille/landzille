@@ -45,8 +45,8 @@ const DoddCityHero = () => {
           <p className={styles.subtext}>
             A $1.6B lake at its edge. A $40B chip campus 30 minutes out.
             DFW&rsquo;s growth wave rolling in. This is a limited, strategic
-            land offering right in the crosshairs &mdash; front-row positioning
-            for early buyers, before the boom.
+            land offering right in the crosshairs, front-row positioning for
+            early buyers, before the boom.
           </p>
 
           <div className={styles.actions}>

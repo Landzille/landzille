@@ -9,18 +9,24 @@ import Arrow from "@/svg/arrow";
 export default function Holdings() {
   const [activeFilter, setActiveFilter] = useState("View All");
 
-  const filteredProperties = properties.filter((property) => {
-    if (activeFilter === "View All") return true;
+  const filteredProperties = properties
+    .filter((property) => {
+      if (activeFilter === "View All") return true;
 
-    const countyMap: { [key: string]: string } = {
-      "Fannin County": "FANNIN COUNTY",
-      "Hunt County": "HUNT COUNTY",
-      "Cooke County": "COOKE COUNTY",
-      "Lamar County": "LAMAR COUNTY",
-    };
+      const countyMap: { [key: string]: string } = {
+        "Fannin County": "FANNIN COUNTY",
+        "Hunt County": "HUNT COUNTY",
+        "Cooke County": "COOKE COUNTY",
+        "Lamar County": "LAMAR COUNTY",
+      };
 
-    return property.county === countyMap[activeFilter];
-  });
+      return property.county === countyMap[activeFilter];
+    })
+    .sort((a, b) => {
+      const aSoldOut = a.actions.includes("Sold Out") ? 1 : 0;
+      const bSoldOut = b.actions.includes("Sold Out") ? 1 : 0;
+      return aSoldOut - bSoldOut;
+    });
 
   return (
     <section className={styles.section} id="land-listings">

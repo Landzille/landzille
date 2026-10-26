@@ -59,10 +59,6 @@ const DoddCityHero = () => {
           </div>
 
           <div className={styles.videoCol}>
-            <div className={styles.videoLabel}>
-              <span className={styles.liveDot} />
-              Watch the overview
-            </div>
             <div className={styles.videoWrap}>
               <div className={styles.videoFrame}>
                 <iframe

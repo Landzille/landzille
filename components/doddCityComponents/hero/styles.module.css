@@ -1,9 +1,8 @@
+/* ---------- Hero ---------- */
 .hero {
   position: relative;
   min-height: 760px;
   overflow: hidden;
-  /* display: flex; */
-  align-items: center;
 }
 
 .backgroundImage {
@@ -33,17 +32,59 @@
     );
 }
 
+/* ---------- Header ---------- */
+.header {
+  position: relative;
+  z-index: 2;
+  padding: 22px 0;
+}
+
+.headerContainer {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: "lora", serif;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.tag {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #cfe0dd;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 7px 14px;
+  border-radius: 999px;
+}
+
+/* ---------- Content ---------- */
 .content {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 110px 0 150px 0;
+  padding: 90px 0 150px 0;
 }
 
 .container {
   max-width: 80%;
   margin: 0 auto;
   width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
 }
 
 .kicker {
@@ -59,11 +100,10 @@
 
 .heading {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 52px;
   font-weight: 600;
   line-height: 1.12;
-  max-width: 900px;
-  margin: 0 0 28px 0;
+  margin: 0 0 24px 0;
   letter-spacing: -0.5%;
 }
 
@@ -74,11 +114,11 @@
 .subtext {
   color: #f0f0f0;
   font-family: "Instrument Sans", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.65;
-  max-width: 620px;
-  margin: 0 0 40px 0;
+  max-width: 540px;
+  margin: 0 0 36px 0;
 }
 
 .actions {
@@ -87,6 +127,7 @@
   flex-wrap: wrap;
 }
 
+/* ---------- Buttons ---------- */
 .primaryButton {
   display: inline-flex;
   align-items: center;
@@ -125,6 +166,81 @@
   color: #1a0f02;
 }
 
+/* ---------- Video ---------- */
+.videoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.videoLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7ef2b8;
+  box-shadow: 0 0 0 0 rgba(126, 242, 184, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 8px rgba(126, 242, 184, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(126, 242, 184, 0);
+  }
+}
+
+.videoWrap {
+  position: relative;
+}
+
+/* Offset gold outline behind the player */
+.videoWrap::before {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border: 1.5px solid rgba(232, 176, 74, 0.7);
+  border-radius: 20px;
+}
+
+.videoFrame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.videoFrame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------- Location label ---------- */
 .locationDisplay {
   position: absolute;
   bottom: 3rem;
@@ -150,9 +266,19 @@
   background: rgba(255, 255, 255, 0.6);
 }
 
+/* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   .heading {
-    font-size: 48px;
+    font-size: 44px;
+  }
+
+  .videoCol {
+    max-width: 640px;
   }
 }
 
@@ -161,12 +287,22 @@
     min-height: 640px;
   }
 
-  .content {
-    padding: 70px 0 110px 0;
+  .headerContainer,
+  .container {
+    max-width: 90%;
   }
 
   .container {
-    max-width: 90%;
+    gap: 40px;
+  }
+
+  .content {
+    padding: 56px 0 110px 0;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 6px 12px;
   }
 
   .heading {
@@ -183,11 +319,25 @@
     gap: 1rem;
   }
 
-  .primaryButton,
+  .primaryButton {
+    padding: 10px 20px;
+    font-size: 12px;
+    width: fit-content;
+    gap: 3px;
+  }
+
   .secondaryButton {
     width: 100%;
     text-align: center;
-    justify-content: center;
+  }
+
+  .videoWrap::before {
+    inset: 8px -8px -8px 8px;
+    border-radius: 16px;
+  }
+
+  .videoFrame {
+    border-radius: 16px;
   }
 
   .locationDisplay {
@@ -201,64 +351,5 @@
 
   .currentLocationLine {
     width: 70px;
-  }
-}
-
-/* Header */
-
-.header {
-  position: relative;
-  z-index: 2;
-  padding: 22px 0;
-}
-
-.headerContainer {
-  max-width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.brand {
-  font-family: "lora", serif;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  font-size: 15px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.tag {
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #cfe0dd;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 7px 14px;
-  border-radius: 999px;
-}
-
-@media (max-width: 768px) {
-  .headerContainer {
-    max-width: 90%;
-  }
-
-  .container {
-    max-width: 90%;
-  }
-
-  .tag {
-    font-size: 10px;
-    padding: 6px 12px;
-  }
-  .primaryButton {
-    padding: 10px 20px;
-    font-size: 12px;
-    width: fit-content;
-    gap: 3px;
   }
 }

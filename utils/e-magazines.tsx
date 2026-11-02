@@ -8,6 +8,13 @@ interface Magazines {
 
 export const allMagazines: Magazines[] = [
   {
+    id: "20",
+    title: "I am Land - Vol 20",
+    subtitle: "Why Dodd City",
+    image: "/assets/magazines/I-am-land-20.jpeg",
+    downloadUrl: "/downloads/magazines/LANDZILLE_ E-Magazine 20.0.pdf",
+  },
+  {
     id: "19",
     title: "I am Land - Vol 19",
     subtitle: "92 Days",

@@ -321,7 +321,7 @@ export const properties: Property[] = [
     location: "QUIET PLAINS",
     acres: "11-15 ACRES",
     tags: ["INFRASTRUCTURE"],
-    actions: ["Inquire for Price"],
+    actions: ["Sold Out"],
   },
 ];
 
